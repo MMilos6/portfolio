@@ -23,12 +23,12 @@ const index = () => {
                         <Service />
                     </div>
                 </div>
-                <div className=" bg-[#0D0D0D] max-w-full h-auto py-10 rounded-xl">
+                {/* <div className=" bg-[#0D0D0D] max-w-full h-auto py-10 rounded-xl">
                     <h3 className="text-center  text-white text-6xl mb-3 font-semibold ">
                         Clients
                     </h3>
                     <Brand />
-                </div>
+                </div> */}
             </div>
         </div>
     );

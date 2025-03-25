@@ -5,60 +5,142 @@ module.exports = [
     {
         id: 1,
         title: "Education",
-        icon: <MdOutlineBusinessCenter />,
+        icon: <MdOutlineSchool />,
         items: [
             {
                 id: 1,
-                date: "2021-2023",
-                title: "Ph.D in Horriblensess ",
-                desc: "ABC University, Los Angeles, CA",
-                bg: "#FFF4F4",
+                date: "2018 - 2019",
+                title: "Frontend JavaScript Development",
+                desc: "ITAcademy",
+                info: (
+                    <p>
+                        <a
+                            target="blank"
+                            href="https://www.it-akademija.com"
+                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            style={{fontStyle: "italic"}}
+                        >
+                            www.it-akademija.com
+                        </a>
+                    </p>
+                ),
             },
 
             {
                 id: 2,
-                date: "2019 - Present",
-                title: "Sr. Software Tester",
-                desc: "Google Inc.",
-                bg: "#FFF1FB",
+                date: "2012 - 2016",
+                title: "Profesional engineer of electrical engineering and computer science",
+                desc: "School of electrical and computer engineering of applied studies",
+                info: (
+                    <p>
+                        <a
+                            target="blank"
+                            href="https://www.viser.edu.rs"
+                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            style={{fontStyle: "italic"}}
+                        >
+                            www.viser.edu.rs
+                        </a>
+                    </p>
+                ),
             },
 
             {
                 id: 3,
-                date: "2021",
-                title: "Best Developer ",
-                desc: "University Of Melbourne, NA",
-                bg: "#FFF4F4",
+                date: "2008 - 2012",
+                title: "Electrical computer tehnics",
+                desc: "High School Kolubara",
+                info: (
+                    <p>
+                        <a
+                            target="blank"
+                            href="https://www.tehnickaskolakolubara.edu.rs"
+                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            style={{fontStyle: "italic"}}
+                        >
+                            www.tehnickaskolakolubara.edu.rs
+                        </a>
+                    </p>
+                ),
             },
         ],
     },
     {
         id: 2,
         title: "Experience",
-        icon: <MdOutlineSchool />,
+        icon: <MdOutlineBusinessCenter />,
         items: [
             {
                 id: 1,
-                date: "2017-2021",
-                title: "Computer Science",
-                desc: "Imperialize Technical Institute",
-                bg: "#EEF5FA",
+                date: "2021 - Present",
+                title: "Frontend Developer",
+                desc: "Geta Digital",
+                info: (
+                    <p>
+                        <a
+                            target="blank"
+                            href="https://www.getadigital.com/"
+                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            style={{fontStyle: "italic"}}
+                        >
+                            www.getadigital.com
+                        </a>
+                    </p>
+                ),
             },
-
             {
                 id: 2,
-                date: "2015-2017",
-                title: "Cr. Web Developer",
-                desc: "ib-themes ltd.",
-                bg: "#F2F4FF",
+                date: "2019 - 2021",
+                title: "Frontend Developer",
+                desc: "Eximius Solutions",
+                info: (
+                    <p>
+                        <a
+                            target="blank"
+                            href="https://eximius-solutions.com/"
+                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            style={{fontStyle: "italic"}}
+                        >
+                            eximius-solutions.com
+                        </a>
+                    </p>
+                ),
             },
-
             {
                 id: 3,
-                date: "2008",
-                title: "Best Writter",
-                desc: "Online Typodev Soluation Ltd.",
-                bg: "#EEF5FA",
+                date: "2019 - 2019",
+                title: "Web Developer",
+                desc: "Link Group",
+                info: (
+                    <p>
+                        <a
+                            target="blank"
+                            href="https://www.link.co.rs"
+                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            style={{fontStyle: "italic"}}
+                        >
+                            www.link.co.rs
+                        </a>
+                    </p>
+                ),
+            },
+            {
+                id: 4,
+                date: "2017 - 2019",
+                title: "Electrical Engineer",
+                desc: "Standard Invest Group",
+                info: (
+                    <p>
+                        <a
+                            target="blank"
+                            href="https://www.sigdoo.rs"
+                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            style={{fontStyle: "italic"}}
+                        >
+                            www.sigdoo.rs
+                        </a>
+                    </p>
+                ),
             },
         ],
     },

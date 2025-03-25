@@ -25,6 +25,7 @@ const Resume = () => {
                             </span>
                             <h3 className="text-xl  text-white"> {singleItem.title} </h3>
                             <p className=" text-[#b7b7b7]">{singleItem.desc}</p>
+                            {singleItem.info}
                         </div>
                     ))}
                 </div>

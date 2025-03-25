@@ -49,17 +49,17 @@ const CommonContact = ({ condition }) => {
     return (
         <div
             className={`${condition
-                    ? "mx-4 md:mx-[60px] p-4 md:p-16  border-[#212425]  border-2"
-                    : "   border-[#212425]  border-2 mb-16  md:p-[48px]  p-4  "
+                ? "mx-4 md:mx-[60px] p-4 md:p-16  border-[#212425]  border-2"
+                : "   border-[#212425]  border-2 mb-16  md:p-[48px]  p-4  "
                 } rounded-xl  bg-[#111111] mb-[30px] md:mb-[60px]`}
         >
             <h3 className="text-4xl  ">
-                <span className="text-[#A6A6A6] ">
-                    I&apos;m always open to discussing product
+                <span className="font-semibold  text-white ">
+                    Design. Code. Capture.
                 </span>
                 <br />
-                <span className="font-semibold  text-white">
-                    design work or partnerships.
+                <span className="text-[#A6A6A6]">
+                    Let&apos;s create something awesome!
                 </span>
             </h3>
             <form id="myForm" ref={form} onSubmit={sendEmail}>

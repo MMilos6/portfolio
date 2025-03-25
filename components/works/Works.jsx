@@ -131,8 +131,8 @@ const Works = () => {
                 onRequestClose={() => setIsOpen(false)}
                 className=" outline-none flex items-center  p-4 md:p-8  rounded-2xl my-8"
             >
-                <div className="w-full md:w-10/12 lg:w-[850px] w-[calc(100%-40px)] flex items-center bg-[#323232] mx-auto rounded-xl p-4 md:p-8 absolute left-1/2 top-1/2 transform -translate-x-[50%] -translate-y-[50%] shadow-lg">
-                    <div className=" overflow-y-scroll max-h-[80vh] no-scrollbar ">
+                <div className="w-full md:w-10/12 lg:w-[850px] w-[calc(100%-40px)] flex items-center bg-[#323232] mx-auto rounded-xl p-4 md:p-8 absolute left-1/2 top-[140px] transform -translate-x-[50%] shadow-lg max-h-[75vh]">
+                    <div className=" overflow-y-scroll max-h-[70vh] no-scrollbar ">
                         {/* close button */}
                         <BsXCircle
                             onClick={() => setIsOpen(false)}

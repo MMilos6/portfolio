@@ -5,7 +5,7 @@ export const metadata = { title: "Miloš Milovanović - Portfolio" };
 
 const index = () => {
     return (
-        <div className="container lg:rounded-2xl bg-white dark:bg-[#111111]  ">
+        <div className="container lg:rounded-2xl bg-[#111111]  ">
             <div data-aos="fade">
                 <div className=" mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
                     <div className="py-12">

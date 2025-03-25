@@ -77,22 +77,22 @@
     background: #cfd0d3;
 }
 
+/* Handle on hover */
+.scrollbarLight::-webkit-scrollbar-thumb:hover {
+    background: #111111;
+}
+
 /* Track */
-.scrollbarDark::-webkit-scrollbar-track {
+.scrollbarLight::-webkit-scrollbar-track {
     border-radius: 100vh;
     background: #000000;
 }
 
 /* Handle */
-.scrollbarDark::-webkit-scrollbar-thumb {
+.scrollbarLight::-webkit-scrollbar-thumb {
     background: #000000;
     border-radius: 100vh;
     border: 5px solid #4f4f4f;
-}
-
-/* Handle on hover */
-.scrollbarLight::-webkit-scrollbar-thumb:hover {
-    background: #111111;
 }
 
 .text-2line {

@@ -57,35 +57,35 @@ const Works = () => {
         <>
             <ul className="mt-[40px] flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
                 <li
-                    className={`${test === "All" ? "text-[#43ac42]" : "fillter-btn "
+                    className={`${test === "All" ? "text-[#2E8B57]" : "fillter-btn "
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("All")}
                 >
                     All
                 </li>
                 <li
-                    className={`${test === "Video" ? "text-[#43ac42]" : "fillter-btn"
+                    className={`${test === "Video" ? "text-[#2E8B57]" : "fillter-btn"
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("Video")}
                 >
                     Video
                 </li>
                 <li
-                    className={`${test === "Web Design" ? "text-[#43ac42]" : "fillter-btn"
+                    className={`${test === "Web Design" ? "text-[#2E8B57]" : "fillter-btn"
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("Web Design")}
                 >
                     Web Design
                 </li>
                 <li
-                    className={`${test === "Logo" ? "text-[#43ac42]" : "fillter-btn ml-0"
+                    className={`${test === "Logo" ? "text-[#2E8B57]" : "fillter-btn ml-0"
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("Logo")}
                 >
                     Logo
                 </li>
                 <li
-                    className={`${test === "UI/UX" ? "text-[#43ac42]" : "fillter-btn"}  `}
+                    className={`${test === "UI/UX" ? "text-[#2E8B57]" : "fillter-btn"}  `}
                     onClick={() => handleSearch("UI/UX")}
                 >
                     Graphic Design
@@ -99,9 +99,9 @@ const Works = () => {
             >
                 {data.map((item) => (
                     <div
-                        className="rounded-lg p-6 dark:border-[2px] border-[#212425]"
+                        className="rounded-lg p-6 border-[2px] border-[#212425]"
                         style={{
-                            background: `${theme === "dark" ? "transparent" : item?.bg}`,
+                            background: "transparent",
                         }}
                         key={item.id}
                         onClick={() => handleModle(item?.id)}
@@ -116,10 +116,10 @@ const Works = () => {
                                 alt="portfolio Image"
                             />
                         </div>
-                        <span className="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">
+                        <span className="pt-5 text-[14px] font-normal block  text-[#A6A6A6]">
                             {item.tag}
                         </span>
-                        <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#43ac42] dark:hover:text-[#43ac42] dark:text-white mt-2">
+                        <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#2E8B57]  hover:text-[#2E8B57]  text-white mt-2">
                             {item.title}
                         </h2>
                     </div>
@@ -131,24 +131,24 @@ const Works = () => {
                 onRequestClose={() => setIsOpen(false)}
                 className=" outline-none flex items-center  p-4 md:p-8  rounded-2xl my-8"
             >
-                <div className=" w-full md:w-10/12 flex items-center   lg:w-[850px] bg-white dark:bg-[#323232] mx-auto rounded-xl p-4 md:p-8 absolute left-1/2 top-1/2 transform -translate-x-[50%] -translate-y-[50%] shadow-lg ">
+                <div className="w-full md:w-10/12 lg:w-[850px] w-[calc(100%-40px)] flex items-center bg-[#323232] mx-auto rounded-xl p-4 md:p-8 absolute left-1/2 top-1/2 transform -translate-x-[50%] -translate-y-[50%] shadow-lg">
                     <div className=" overflow-y-scroll max-h-[80vh] no-scrollbar ">
                         {/* close button */}
                         <BsXCircle
                             onClick={() => setIsOpen(false)}
                             className="text-7xl cursor-pointer  absolute right-2 -top-12 md:-right-10 md:-top-6 z-50  text-white transition transform hover:rotate-45 duration-300 ease-in-out "
                         />
-                        <h2 className="text-[#43ac42] dark:hover:text-[#43ac42] text-4xl text-center font-bold">
+                        <h2 className="text-[#2E8B57]  hover:text-[#2E8B57] text-4xl text-center font-bold">
                             {singleData.tag} Project
                         </h2>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 my-6">
                             <div className="space-y-2">
-                                <p className="dark:text-white flex items-center text-[15px]  sm:text-lg ">
+                                <p className=" text-white flex items-center text-[15px]  sm:text-lg ">
                                     <FiFilePlus className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
                                     Project :&nbsp; <span className="font-medium "> Website</span>
                                 </p>
-                                <p className="dark:text-white flex items-center text-[15px]  sm:text-lg ">
+                                <p className=" text-white flex items-center text-[15px]  sm:text-lg ">
                                     <FiCode className="text-lg mr-2 hidden sm:block " />
                                     Langages :&nbsp;
                                     <span className="font-medium ">{singleData?.langages}</span>
@@ -156,15 +156,15 @@ const Works = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg ">
+                                <p className=" text-white flex items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg ">
                                     <FiUser className="text-lg mr-2 hidden sm:block" />
                                     Client :&nbsp;
                                     <span className="font-medium ">{singleData?.client}</span>
                                 </p>
-                                <p className="dark:text-white flex items-center text-[15px] sm:text-lg ">
+                                <p className=" text-white flex items-center text-[15px] sm:text-lg ">
                                     <FiExternalLink className="text-lg mr-2 hidden sm:block" />
                                     Preview :&nbsp;
-                                    <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#43ac42] ">
+                                    <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#2E8B57] ">
                                         <a
                                             href={singleData?.link}
                                             target="_blank"
@@ -177,7 +177,7 @@ const Works = () => {
                             </div>
                         </div>
 
-                        <p className="dark:text-white  text-2line font-normal text-[15px] sm:text-sm  ">
+                        <p className=" text-white  text-2line font-normal text-[15px] sm:text-sm  ">
                             {singleData?.description}
                         </p>
 

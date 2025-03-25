@@ -12,7 +12,7 @@ const Address = () => {
                 <div
                     key={i}
                     style={{
-                        background: `${theme === "dark" ? "#212425" : item?.bg}`,
+                        background: "#212425",
                     }}
                     className="flex flex-wrap p-[30px]  border-[#A6A6A6] gap-2 rounded-xl "
                 >
@@ -22,11 +22,11 @@ const Address = () => {
                             width={30}
                             height={20}
                             alt="icon"
-                            className="text-4xl dark:text-white"
+                            className="text-4xl  text-white"
                         />
                     </span>
                     <div className="space-y-2">
-                        <p className="text-xl font-semibold dark:text-white">
+                        <p className="text-xl font-semibold  text-white">
                             {item?.title} :
                         </p>
                         {item?.info}

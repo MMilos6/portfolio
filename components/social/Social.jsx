@@ -8,21 +8,21 @@ const Social = () => {
     const socialContent = [
         {
             id: 1,
-            link: "https://www.instagram.com/",
-            icon: <FaInstagram />,
-            iconClass: "text-[#E4405F]",
+            link: "https://www.linkedin.com/in/milos--milovanovic/",
+            icon: <FaLinkedinIn />,
+            iconClass: "text-[#0077B5]",
         },
         {
             id: 2,
-            link: "https://github.com/",
+            link: "https://github.com/Mmilos6",
             icon: <FaGithub />,
             iconClass: "text-[#181717]",
         },
         {
             id: 3,
-            link: "https://www.linkedin.com/",
-            icon: <FaLinkedinIn />,
-            iconClass: "text-[#0077B5]",
+            link: "https://www.instagram.com/mosquito_junior/",
+            icon: <FaInstagram />,
+            iconClass: "text-[#E4405F]",
         },
     ];
 

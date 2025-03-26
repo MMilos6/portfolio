@@ -6,7 +6,7 @@ export const metadata = { title: "Miloš Milovanović - Portfolio" };
 
 const index = () => {
     return (
-        <div className="container lg:rounded-2xl bg-[#111111]">
+        <div className="container lg:rounded-2xl bg-[#0c0c0c]">
             <div data-aos="fade">
                 <div className="container sm:px-5 md:px-10 lg:px-20 ">
                     <div className="py-12 px-4">
@@ -19,10 +19,10 @@ const index = () => {
                     </div>
                 </div>
 
-                <div className="container  bg-[#0D0D0D] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
+                <div className="container  bg-[#101010] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
                     <div className="w-full">
-                        <h4 className="text-5xl  text-white font-medium mb-8">
-                            Tech Stack
+                        <h4 className="text-5xl text-white font-medium mb-4">
+                            Tech Stack & Skills
                         </h4>
 
                         <div className="flex gap-3 flex-wrap">

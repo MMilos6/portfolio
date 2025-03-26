@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import Brand from "@/components/brand/Brand";
 import About from "@/components/about";
 import Service from "@/components/service/Service";
 
@@ -7,7 +6,7 @@ export const metadata = { title: "Miloš Milovanović - Portfolio" };
 
 const index = () => {
     return (
-        <div className="container lg:rounded-2xl bg-[#111111] pb-12 px-4 sm:px-5 md:px-10 lg:px-20">
+        <div className="container lg:rounded-2xl bg-[#0c0c0c] pb-12 px-4 sm:px-5 md:px-10 lg:px-20">
             <div data-aos="fade">
                 <div className="py-12">
                     <h2 className="after-effect after:left-52 mt-12 lg:mt-0 ">
@@ -23,12 +22,6 @@ const index = () => {
                         <Service />
                     </div>
                 </div>
-                {/* <div className=" bg-[#0D0D0D] max-w-full h-auto py-10 rounded-xl">
-                    <h3 className="text-center  text-white text-6xl mb-3 font-semibold ">
-                        Clients
-                    </h3>
-                    <Brand />
-                </div> */}
             </div>
         </div>
     );

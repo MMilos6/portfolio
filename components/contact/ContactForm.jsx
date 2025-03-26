@@ -49,9 +49,9 @@ const CommonContact = ({ condition }) => {
     return (
         <div
             className={`${condition
-                ? "mx-4 md:mx-[60px] p-4 md:p-16  border-[#212425]  border-2"
-                : "   border-[#212425]  border-2 mb-16  md:p-[48px]  p-4  "
-                } rounded-xl  bg-[#111111] mb-[30px] md:mb-[60px]`}
+                ? "mx-4 md:mx-[60px] p-4 md:p-16  border-[#101010]  border-2"
+                : "   border-[#101010]  border-2 mb-16  md:p-[48px]  p-4  "
+                } rounded-xl  bg-[#0c0c0c] mb-[30px] md:mb-[60px]`}
         >
             <h3 className="text-4xl  ">
                 <span className="font-semibold  text-white ">

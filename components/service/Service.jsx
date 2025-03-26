@@ -4,8 +4,6 @@ import { useTheme } from "next-themes";
 import serviceData from "@/data/serviceData";
 
 const Service = () => {
-    const { theme } = useTheme();
-
     return (
         <>
             {serviceData.map((item) => (

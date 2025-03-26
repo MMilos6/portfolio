@@ -17,7 +17,7 @@ const Resume = () => {
                     </div>
                     {item.items.map((singleItem) => (
                         <div
-                            className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg   border-[#212425]  border-2"
+                            className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg   border-[#101010]  border-2"
                             key={singleItem.id}
                         >
                             <span className="text-tiny    text-[#b7b7b7]">

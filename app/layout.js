@@ -1,12 +1,12 @@
 "use client";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "../styles/custom.css";
 import "../styles/globals.css";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import Header from "@/components/header/Header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function RootLayout({ children }) {
     useEffect(() => {

@@ -1,30 +1,18 @@
 "use client";
-import Image from "next/image";
 import { useTheme } from "next-themes";
 import addressData from "@/data/addressData";
 
 const Address = () => {
-    const { theme } = useTheme();
-
     return (
         <>
             {addressData.map((item, i) => (
                 <div
                     key={i}
                     style={{
-                        background: "#212425",
+                        background: "#101010",
                     }}
                     className="flex flex-wrap p-[30px]  border-[#A6A6A6] gap-2 rounded-xl "
                 >
-                    <span className="w-8 mt-2">
-                        <Image
-                            src={item.icon}
-                            width={30}
-                            height={20}
-                            alt="icon"
-                            className="text-4xl  text-white"
-                        />
-                    </span>
                     <div className="space-y-2">
                         <p className="text-xl font-semibold  text-white">
                             {item?.title} :

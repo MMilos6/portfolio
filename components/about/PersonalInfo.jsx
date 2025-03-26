@@ -15,7 +15,7 @@ const PersonalInfo = () => {
             meta: (
                 <>
                     <a
-                        className="hover:text-[#FA5252] duration-300 transition"
+                        className="hover:text-[#2E8B57] duration-300 transition"
                         href="tel:+381656848296"
                     >
                         +381 65 6848 296
@@ -39,7 +39,7 @@ const PersonalInfo = () => {
                 <>
                     {" "}
                     <a
-                        className="hover:text-[#FA5252] duration-300 transition"
+                        className="hover:text-[#2E8B57] duration-300 transition"
                         href="mailto:milos.milovanovic.la@gmail.com"
                     >
                         milos.milovanovic.la@gmail.com

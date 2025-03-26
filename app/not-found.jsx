@@ -1,8 +1,7 @@
 import Link from "next/link";
-export const metadata = {
-    title:
-        "404 || Bostami - Tailwind CSS  Personal Portfolio React Nextjs Template",
-};
+
+export const metadata = { title: "404 || Miloš Milovanović - Portfolio" };
+
 const NotFound = () => {
     return (
         <div className="mt-12 w-full h-full flex flex-col justify-center items-center">

@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import Address from "@/components/contact/Address";
 import ContactForm from "@/components/contact/ContactForm";
 
@@ -8,11 +7,7 @@ const index = () => {
     return (
         <div className="container lg:rounded-2xl bg-[#0c0c0c] ">
             <div data-aos="fade">
-                <div className="py-12 px-4 sm:px-5 md:px-10 lg:px-20">
-                    <h2 className="after-effect after:left-52 mb-[40px] mt-12  lg:mt-0">
-                        Contact
-                    </h2>
-
+                <div className="py-12 mt-12 px-4 sm:px-5 md:px-10 lg:px-20">
                     <div className="lg:flex gap-x-20">
                         <div className="w-full xl:w-[40%] space-y-6">
                             <Address />
@@ -27,4 +22,4 @@ const index = () => {
     );
 };
 
-export default dynamic(() => Promise.resolve(index), { ssr: false });
+export default index;

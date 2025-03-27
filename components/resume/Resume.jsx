@@ -1,31 +1,27 @@
-"use client";
-import { useTheme } from "next-themes";
 import resumeData from "@/data/resumeData";
 
 const Resume = () => {
-    const { theme } = useTheme();
-
     return (
         <>
-            {resumeData.map((item) => (
-                <div key={item.id}>
+            {resumeData.map(({id, iconColor, title, items, icon}) => (
+                <div key={id}>
                     <div className="flex items-center space-x-2 mb-4">
-                        <div className="text-6xl text-[#2E8B57]">{item.icon}</div>
-                        <h4 className="text-5xl  text-white font-medium">
-                            {item.title}
+                        <div className="text-6xl" style={{color: iconColor}}>{icon}</div>
+                        <h4 className="text-5xl text-white font-medium">
+                            {title}
                         </h4>
                     </div>
-                    {item.items.map((singleItem) => (
+                    {items.map(({id, date, title, desc, info}) => (
                         <div
                             className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg   border-[#101010]  border-2"
-                            key={singleItem.id}
+                            key={id}
                         >
-                            <span className="text-tiny    text-[#b7b7b7]">
-                                {singleItem.date}
+                            <span className="text-tiny text-[#b7b7b7]">
+                                {date}
                             </span>
-                            <h3 className="text-xl  text-white"> {singleItem.title} </h3>
-                            <p className=" text-[#b7b7b7]">{singleItem.desc}</p>
-                            {singleItem.info}
+                            <h3 className="text-xl text-white"> {title} </h3>
+                            <p className=" text-[#b7b7b7]">{desc}</p>
+                            {info}
                         </div>
                     ))}
                 </div>

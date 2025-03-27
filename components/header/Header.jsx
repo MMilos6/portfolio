@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import HeaderMenu from "@/data/HeaderMenu";
+import headerMenu from "@/data/headerMenu";
 import { usePathname } from "next/navigation";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
@@ -64,18 +64,18 @@ const Header = () => {
                                 : "flex my-12 "
                                 }`}
                         >
-                            {HeaderMenu.map((item) => (
-                                <li key={item.id} className="mb-1">
+                            {headerMenu.map(({ id, routePath, icon, name }) => (
+                                <li key={id} className="mb-1">
                                     <Link
-                                        className={`${isActiveLink(item.routePath, pathname)
-                                            ? "rounded-md  cursor-pointer font-poppins font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out hover:text-white bg-[#101010] hover:text-white hover:bg-gradient-to-r from-[#2E8B57] to-[#3a9f3a] text-[#A6A6A6] linked bg-gradient-to-r "
-                                            : "px-2 rounded-md  cursor-pointer font-poppins font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out hover:text-white bg-[#101010] hover:text-white hover:bg-gradient-to-r from-[#2E8B57] to-[#3a9f3a] text-[#A6A6A6]"
+                                        className={`${isActiveLink(routePath, pathname)
+                                            ? "rounded-md  cursor-pointer font-poppins font-medium mx-2.5 flex text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out hover:text-white bg-[#101010] hover:text-white hover:bg-gradient-to-r from-[#3d6037] to-[#182f17] text-[#A6A6A6] linked bg-gradient-to-r "
+                                            : "px-2 rounded-md  cursor-pointer font-poppins font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out hover:text-white bg-[#101010] hover:text-white hover:bg-gradient-to-r from-[#3d6037] to-[#182f17] text-[#A6A6A6]"
                                             } `}
-                                        href={item.routePath}
+                                        href={routePath}
                                         onClick={() => setMenuOpen(false)}
                                     >
-                                        <span className="mr-2 text-xl">{item.icon}</span>
-                                        {item.name}
+                                        <span className="mr-2 text-xl">{icon}</span>
+                                        {name}
                                     </Link>
                                 </li>
                             ))}

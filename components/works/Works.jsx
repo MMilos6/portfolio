@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Modal from "react-modal";
-import { useTheme } from "next-themes";
 import Masonry from "react-masonry-css";
 import { BsXCircle } from "react-icons/bs";
 import { useEffect, useState } from "react";
@@ -54,37 +53,37 @@ const Works = () => {
 
     return (
         <>
-            <ul className="mt-[40px] flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
+            <ul className="flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
                 <li
-                    className={`${test === "All" ? "text-[#2E8B57]" : "fillter-btn "
+                    className={`${test === "All" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn "
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("All")}
                 >
                     All
                 </li>
                 <li
-                    className={`${test === "Video" ? "text-[#2E8B57]" : "fillter-btn"
+                    className={`${test === "Video" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("Video")}
                 >
                     Video
                 </li>
                 <li
-                    className={`${test === "Web Design" ? "text-[#2E8B57]" : "fillter-btn"
+                    className={`${test === "Web Design" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("Web Design")}
                 >
                     Web Design
                 </li>
                 <li
-                    className={`${test === "Logo" ? "text-[#2E8B57]" : "fillter-btn ml-0"
+                    className={`${test === "Logo" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn ml-0"
                         } mr-4 md:mx-4`}
                     onClick={() => handleSearch("Logo")}
                 >
                     Logo
                 </li>
                 <li
-                    className={`${test === "UI/UX" ? "text-[#2E8B57]" : "fillter-btn"}  `}
+                    className={`${test === "UI/UX" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"}  `}
                     onClick={() => handleSearch("UI/UX")}
                 >
                     Graphic Design
@@ -118,7 +117,7 @@ const Works = () => {
                         <span className="pt-5 text-[14px] font-normal block  text-[#A6A6A6]">
                             {item.tag}
                         </span>
-                        <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#2E8B57]  hover:text-[#2E8B57]  text-white mt-2">
+                        <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#3d6037]  hover:text-[#3d6037]  text-white mt-2">
                             {item.title}
                         </h2>
                     </div>
@@ -135,9 +134,9 @@ const Works = () => {
                         {/* close button */}
                         <BsXCircle
                             onClick={() => setIsOpen(false)}
-                            className="text-7xl cursor-pointer  absolute right-2 -top-12 md:-right-10 md:-top-6 z-50  text-white transition transform hover:rotate-45 duration-300 ease-in-out "
+                            className="text-7xl cursor-pointer  absolute right-2 -top-12 md:-right-10 md:-top-6 z-50  text-white transition transform hover:text-[#3d6037] duration-300 ease-in-out "
                         />
-                        <h2 className="text-[#2E8B57]  hover:text-[#2E8B57] text-4xl text-center font-bold">
+                        <h2 className="text-[#3d6037]  hover:text-[#3d6037] text-4xl text-center font-bold">
                             {singleData.tag} Project
                         </h2>
 
@@ -163,7 +162,7 @@ const Works = () => {
                                 <p className=" text-white flex items-center text-[15px] sm:text-lg ">
                                     <FiExternalLink className="text-lg mr-2 hidden sm:block" />
                                     Preview :&nbsp;
-                                    <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#2E8B57] ">
+                                    <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#3d6037] ">
                                         <a
                                             href={singleData?.link}
                                             target="_blank"

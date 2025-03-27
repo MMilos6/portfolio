@@ -1,75 +1,21 @@
-import {
-    FaMobileAlt,
-    FaMapMarkerAlt,
-    FaRegCalendarAlt,
-    FaEnvelopeOpenText,
-} from "react-icons/fa";
+import personalInfo from "@/data/personalInfo";
 
 const PersonalInfo = () => {
-    const personalContent = [
-        {
-            id: 1,
-            icon: <FaMobileAlt />,
-            iconColor: "text-oriange",
-            name: "Phone",
-            meta: (
-                <>
-                    <a
-                        className="hover:text-[#2E8B57] duration-300 transition"
-                        href="tel:+381656848296"
-                    >
-                        +381 65 6848 296
-                    </a>
-                </>
-            ),
-        },
-        {
-            id: 2,
-            icon: <FaMapMarkerAlt />,
-            iconColor: "text-oriange-lite",
-            name: "Location",
-            meta: <>Belgrade, Serbia</>,
-        },
-        {
-            id: 3,
-            icon: <FaEnvelopeOpenText />,
-            iconColor: "text-green",
-            name: "Email",
-            meta: (
-                <>
-                    {" "}
-                    <a
-                        className="hover:text-[#2E8B57] duration-300 transition"
-                        href="mailto:milos.milovanovic.la@gmail.com"
-                    >
-                        milos.milovanovic.la@gmail.com
-                    </a>
-                </>
-            ),
-        },
-        {
-            id: 4,
-            icon: <FaRegCalendarAlt />,
-            iconColor: "text-color-50",
-            name: "Birthday",
-            meta: <>06.11.1992</>,
-        },
-    ];
-
     return (
         <>
-            {personalContent.map((item) => (
-                <div className="flex" key={item.id}>
+            {personalInfo.map(({iconColor, id, icon, name, meta}) => (
+                <div className="flex" key={id}>
                     <span
-                        className={`${item.iconColor}  bg-color-990 shadow-icon mr-2.5 flex items-center justify-center rounded-md text-2xl w-12 text-`}
+                        className={`bg-color-990 shadow-icon mr-2.5 flex items-center justify-center rounded-md text-2xl w-12 text-`}
+                        style={{color: iconColor}}
                     >
-                        {item.icon}
+                        {icon}
                     </span>
                     <div className="space-y-1">
                         <p className="text-xs    text-color-910">
-                            {item.name}
+                            {name}
                         </p>
-                        <h6 className="font-medium  text-white">{item.meta}</h6>
+                        <h6 className="font-medium  text-white">{meta}</h6>
                     </div>
                 </div>
             ))}

@@ -1,30 +1,26 @@
-"use client";
-import Image from "next/image";
-import { useTheme } from "next-themes";
 import serviceData from "@/data/serviceData";
 
 const Service = () => {
     return (
         <>
-            {serviceData.map((item) => (
+            {serviceData.map(({id, color, icon, title, des}) => (
                 <div
-                    className="about-box  bg-transparent"
-                    key={item.id}
+                    className="about-box bg-transparent"
+                    key={id}
                 >
-                    <Image
-                        className="w-10 h-10 object-contain  block"
-                        src={item.icon}
-                        width={40}
-                        height={40}
-                        alt="icon"
-                    />
+                    <span
+                        className='text-[30px]'
+                        style={{color: color}}
+                    >
+                        {icon}
+                    </span>
 
-                    <div className="space-y-2 break-all">
+                    <div className="space-y-2">
                         <h3 className=" text-white text-xl font-semibold">
-                            {item?.title}
+                            {title}
                         </h3>
                         <p className=" leading-8  text-[#A6A6A6]">
-                            {item?.des}
+                            {des}
                         </p>
                     </div>
                 </div>

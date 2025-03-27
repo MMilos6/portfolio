@@ -1,11 +1,12 @@
 import { MdOutlineBusinessCenter, MdOutlineSchool } from "react-icons/md";
-import { FaRegSmile } from "react-icons/fa";
+import { FaRegSmile, FaRegTrophy } from "react-icons/fa";
 
 module.exports = [
     {
         id: 1,
         title: "Education",
         icon: <MdOutlineSchool />,
+        iconColor: "#F4D03F",
         items: [
             {
                 id: 1,
@@ -17,7 +18,7 @@ module.exports = [
                         <a
                             target="blank"
                             href="https://www.it-akademija.com"
-                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            className="break-all text-[#b7b7b7] hover:text-[#3d6037]"
                             style={{fontStyle: "italic"}}
                         >
                             www.it-akademija.com
@@ -25,7 +26,6 @@ module.exports = [
                     </p>
                 ),
             },
-
             {
                 id: 2,
                 date: "2012 - 2016",
@@ -36,7 +36,7 @@ module.exports = [
                         <a
                             target="blank"
                             href="https://www.viser.edu.rs"
-                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            className="break-all text-[#b7b7b7] hover:text-[#3d6037]"
                             style={{fontStyle: "italic"}}
                         >
                             www.viser.edu.rs
@@ -44,7 +44,6 @@ module.exports = [
                     </p>
                 ),
             },
-
             {
                 id: 3,
                 date: "2008 - 2012",
@@ -55,7 +54,7 @@ module.exports = [
                         <a
                             target="blank"
                             href="https://www.tehnickaskolakolubara.edu.rs"
-                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            className="break-all text-[#b7b7b7] hover:text-[#3d6037]"
                             style={{fontStyle: "italic"}}
                         >
                             www.tehnickaskolakolubara.edu.rs
@@ -69,6 +68,7 @@ module.exports = [
         id: 2,
         title: "Experience",
         icon: <MdOutlineBusinessCenter />,
+        iconColor: "#9C8D4F",
         items: [
             {
                 id: 1,
@@ -80,7 +80,7 @@ module.exports = [
                         <a
                             target="blank"
                             href="https://www.getadigital.com/"
-                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            className="break-all text-[#b7b7b7] hover:text-[#3d6037]"
                             style={{fontStyle: "italic"}}
                         >
                             www.getadigital.com
@@ -98,7 +98,7 @@ module.exports = [
                         <a
                             target="blank"
                             href="https://eximius-solutions.com/"
-                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            className="break-all text-[#b7b7b7] hover:text-[#3d6037]"
                             style={{fontStyle: "italic"}}
                         >
                             eximius-solutions.com
@@ -116,7 +116,7 @@ module.exports = [
                         <a
                             target="blank"
                             href="https://www.link.co.rs"
-                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            className="break-all text-[#b7b7b7] hover:text-[#3d6037]"
                             style={{fontStyle: "italic"}}
                         >
                             www.link.co.rs
@@ -134,7 +134,7 @@ module.exports = [
                         <a
                             target="blank"
                             href="https://www.sigdoo.rs"
-                            className="text-[#b7b7b7] hover:text-[#2E8B57]"
+                            className="break-all text-[#b7b7b7] hover:text-[#3d6037]"
                             style={{fontStyle: "italic"}}
                         >
                             www.sigdoo.rs
@@ -148,27 +148,31 @@ module.exports = [
         id: 3,
         title: "Personal",
         icon: <FaRegSmile />,
+        iconColor: "#E6A5D7",
         items: [
             {
                 id: 1,
-                date: "2023",
-                title: "Traveled across 5 countries",
-                desc: "Explored cultures, met people",
-                bg: "#FCF4FF",
+                date: "2024 - Present",
+                title: "Regular Workouts",
+                desc: "Focused on strength training and cardio for overall fitness.",
             },
             {
                 id: 2,
-                date: "2022",
-                title: "Completed a hiking challenge",
-                desc: "Pushed mental and physical limits",
-                bg: "#FCF9F2",
+                date: "2022 - Present",
+                title: "Bicycling Adventures",
+                desc: "Exploring new trails and routes while staying fit and enjoying nature.",
             },
             {
                 id: 3,
-                date: "2021",
-                title: "Started a workout habit",
-                desc: "Improved health and strength",
-                bg: "#FCF4FF",
+                date: "2018 - Present",
+                title: "Photography Hobbyist",
+                desc: "Capturing beautiful moments and experimenting with different photography styles.",
+            },
+            {
+                id: 4,
+                date: "2010 - Present",
+                title: "Beer Tasting Enthusiast",
+                desc: "Exploring new craft beers while learning about brewing techniques.",
             },
         ],
     },

@@ -26,7 +26,7 @@ const Hero = () => {
                 href="/"
                 // href="/images/cv.pdf"
                 // download
-                className="flex items-center bg-gradient-to-r from-[#2E8B57] to-[#3a9f3a] duration-200 transition ease-linear hover:bg-gradient-to-l px-8 py-3 text-lg text-white rounded-[35px] mt-6"
+                className="flex text-[#A6A6A6] items-center bg-[#101010] duration-200 transition ease-linear hover:bg-gradient-to-r from-[#3d6037] to-[#182f17] px-8 py-3 text-lg hover:text-white rounded-[35px] mt-6"
             >
                 Download CV
             </a>

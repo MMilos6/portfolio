@@ -1,23 +1,27 @@
-"use client";
-import { useTheme } from "next-themes";
-import addressData from "@/data/addressData";
+import contactData from "@/data/contactData";
 
 const Address = () => {
     return (
         <>
-            {addressData.map((item, i) => (
+            {contactData.map(({ title, info, icon, iconColor }, i) => (
                 <div
                     key={i}
                     style={{
                         background: "#101010",
                     }}
-                    className="flex flex-wrap p-[30px]  border-[#A6A6A6] gap-2 rounded-xl "
+                    className="flex flex-wrap p-[30px] border-[#A6A6A6] gap-2 rounded-xl"
                 >
                     <div className="space-y-2">
-                        <p className="text-xl font-semibold  text-white">
-                            {item?.title} :
+                        <p className="text-xl flex font-semibold text-white">
+                            <div
+                                className="text-2xl mr-3"
+                                style={{ color: iconColor }}
+                            >
+                                {icon}
+                            </div>
+                            {title}
                         </p>
-                        {item?.info}
+                        <span className="break-all">{info}</span>
                     </div>
                 </div>
             ))}

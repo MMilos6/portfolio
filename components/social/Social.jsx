@@ -30,10 +30,10 @@ const Social = () => {
         <>
             {socialContent.map((item) => (
                 <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     key={item.id}
+                    target="_blank"
+                    href={item.link}
+                    rel="noopener noreferrer"
                 >
                     <span className={`socialbtn ${item.iconClass}`}>{item.icon}</span>
                 </a>

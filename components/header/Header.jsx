@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import headerNav from "@/data/headerNav";
 import { usePathname } from "next/navigation";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
@@ -14,7 +15,6 @@ const isActiveLink = (menuPath, routePath) => {
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
-return null;
     return (
         <div className="z-50 ">
             <div className="container">
@@ -63,7 +63,7 @@ return null;
                                 : "flex my-12 "
                                 }`}
                         >
-                            {headerMenu.map(({ id, routePath, icon, name }) => (
+                            {headerNav.map(({ id, routePath, icon, name }) => (
                                 <li key={id} className="mb-1">
                                     <Link
                                         className={`${isActiveLink(routePath, pathname)

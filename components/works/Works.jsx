@@ -56,37 +56,30 @@ const Works = () => {
             <ul className="flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
                 <li
                     className={`${test === "All" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn "
-                        } mr-4 md:mx-4`}
+                        } mr-2 md:mx-2`}
                     onClick={() => handleSearch("All")}
                 >
                     All
                 </li>
                 <li
-                    className={`${test === "Video" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
-                        } mr-4 md:mx-4`}
-                    onClick={() => handleSearch("Video")}
+                    className={`${test === "Development" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
+                        } mr-2 md:mx-2`}
+                    onClick={() => handleSearch("Development")}
                 >
-                    Video
+                    Development
                 </li>
                 <li
-                    className={`${test === "Web Design" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
-                        } mr-4 md:mx-4`}
-                    onClick={() => handleSearch("Web Design")}
+                    className={`${test === "Design" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
+                        } mr-2 md:mx-2`}
+                    onClick={() => handleSearch("Design")}
                 >
-                    Web Design
+                    Design
                 </li>
                 <li
-                    className={`${test === "Logo" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn ml-0"
-                        } mr-4 md:mx-4`}
-                    onClick={() => handleSearch("Logo")}
+                    className={`${test === "Photography" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"}  mr-2 md:mx-2 `}
+                    onClick={() => handleSearch("Photography")}
                 >
-                    Logo
-                </li>
-                <li
-                    className={`${test === "UI/UX" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"}  `}
-                    onClick={() => handleSearch("UI/UX")}
-                >
-                    Graphic Design
+                    Photography
                 </li>
             </ul>
 
@@ -137,19 +130,29 @@ const Works = () => {
                             className="text-7xl cursor-pointer  absolute right-2 -top-12 md:-right-10 md:-top-6 z-50  text-white transition transform hover:text-[#3d6037] duration-300 ease-in-out "
                         />
                         <h2 className="text-[#3d6037]  hover:text-[#3d6037] text-4xl text-center font-bold">
-                            {singleData.tag} Project
+                            {singleData.tag}
                         </h2>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 my-6">
                             <div className="space-y-2">
                                 <p className=" text-white flex items-center text-[15px]  sm:text-lg ">
                                     <FiFilePlus className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
-                                    Project :&nbsp; <span className="font-medium "> Website</span>
+                                    Project Type :&nbsp; <span className="font-medium ">{singleData?.projectType}</span>
                                 </p>
                                 <p className=" text-white flex items-center text-[15px]  sm:text-lg ">
                                     <FiCode className="text-lg mr-2 hidden sm:block " />
-                                    Langages :&nbsp;
-                                    <span className="font-medium ">{singleData?.langages}</span>
+                                    {singleData?.langages &&
+                                        <>
+                                            <span>Langages :&nbsp;</span>
+                                            <span className="font-medium ">{singleData?.langages}</span>
+                                        </>
+                                    }
+                                    {singleData?.tools &&
+                                        <>
+                                            <span>Tools :&nbsp;</span>
+                                            <span className="font-medium ">{singleData?.tools}</span>
+                                        </>
+                                    }
                                 </p>
                             </div>
 

@@ -54,12 +54,15 @@ const Header = () => {
                                 />
                             </Link>
 
-                            <Hamburger
-                                toggled={menuOpen}
-                                toggle={setMenuOpen}
-                                size={40}
-                                color='#b1b1b1'
-                            />
+                            <div className="lg:hidden">
+                                <Hamburger
+                                    toggled={menuOpen}
+                                    toggle={setMenuOpen}
+                                    size={40}
+                                    color='#b1b1b1'
+
+                                />
+                            </div>
                         </div>
                     </div>
 

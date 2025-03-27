@@ -3,19 +3,27 @@ import personalInfo from "@/data/personalInfo";
 const PersonalInfo = () => {
     return (
         <>
-            {personalInfo.map(({iconColor, id, icon, name, meta}) => (
+            {personalInfo.map(({ iconColor, id, icon, name, href, label }) => (
                 <div className="flex" key={id}>
                     <span
                         className={`bg-color-990 shadow-icon mr-2.5 flex items-center justify-center rounded-md text-2xl w-12 text-`}
-                        style={{color: iconColor}}
+                        style={{ color: iconColor }}
                     >
                         {icon}
                     </span>
                     <div className="space-y-1">
-                        <p className="text-xs    text-color-910">
+                        <p className="text-xs text-color-910">
                             {name}
                         </p>
-                        <p className="font-medium  text-white">{meta}</p>
+                        <p className="font-medium text-white">
+                            {href ?
+                                <a href={href} className="hover:text-[#3d6037] duration-300 transition">
+                                    {label}
+                                </a>
+                                :
+                                <>{label}</>
+                            }
+                        </p>
                     </div>
                 </div>
             ))}

@@ -8,7 +8,7 @@ const Hero = () => {
             data-aos="fade"
         >
             <Image
-                className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]"
+                className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px] shadow-[0_6px_10px_rgba(0,0,0,1)]"
                 src="/images/about/avatar.jpg"
                 width={250}
                 height={250}
@@ -26,7 +26,7 @@ const Hero = () => {
                 href="/"
                 // href="/images/cv.pdf"
                 // download
-                className="flex text-[#A6A6A6] items-center bg-[#101010] duration-200 transition ease-linear hover:bg-gradient-to-r from-[#3d6037] to-[#182f17] px-8 py-3 text-lg hover:text-white rounded-[35px] mt-6"
+                className="flex text-[#A6A6A6] items-center transition ease-linear bg-gradient-to-r from-[#3d6037] to-[#182f17] px-8 py-3 text-lg text-white rounded-[35px] mt-6 shadow-[0_5px_10px_rgba(0,0,0,1)]"
             >
                 Download CV
             </a>

@@ -69,13 +69,13 @@ const CommonContact = ({ condition }) => {
                         id="name"
                         type="text"
                         name="name"
-                        className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm   bg-transparent border-0 border-b-[2px]  appearance-none  text-white  border-[#333333]  focus:border-[#3d6037] focus:outline-none focus:ring-0 focus:border-[#3d6037] peer"
+                        className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-[2px] appearance-none text-white border-[#333333] focus:border-[#3d6037] focus:outline-none focus:ring-0 focus:border-[#3d6037] peer"
                         placeholder=" "
                         required
                     />
                     <label
                         htmlFor="name"
-                        className="peer-focus:font-medium absolute text-sm text-gray-500  text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#3d6037] peer-focus: text-[#3d6037] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
+                        className="peer-focus:font-medium absolute text-sm text-gray-500 text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#3d6037] peer-focus: text-[#3d6037] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
                     >
                         Name *
                     </label>

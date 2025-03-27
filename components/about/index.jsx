@@ -16,7 +16,7 @@ const index = () => {
             <div className="col-span-12 md:col-span-8 space-y-2.5">
                 <div className=" md:mr-12 xl:mr-16">
                     <h3 className="text-4xl font-medium mt-[-8px] text-white mb-2.5 ">
-                        Who am i?
+                        Who am I?
                     </h3>
                     <p className="text-color-910 leading-7">
                         Hi, I&apos;m 32 years old with over five years of experience as a software developer, primarily focused on frontend development, along with expertise in UI/UX design and photography. I have an excellent command of verbal and written English.

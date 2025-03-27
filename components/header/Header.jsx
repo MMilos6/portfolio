@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import headerMenu from "@/data/headerMenu";
 import { usePathname } from "next/navigation";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
@@ -15,7 +14,7 @@ const isActiveLink = (menuPath, routePath) => {
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
-
+return null;
     return (
         <div className="z-50 ">
             <div className="container">

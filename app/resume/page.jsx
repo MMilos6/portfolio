@@ -11,7 +11,7 @@ const index = () => {
         <div className="container lg:rounded-2xl bg-[#0c0c0c]">
             <div data-aos="fade">
                 <div className="container sm:px-5 md:px-10 lg:px-20 ">
-                    <div className="py-12 px-4 mt-[50px]">
+                    <div className="py-12 px-4 mt-[70px]">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
                             <Resume />
                         </div>

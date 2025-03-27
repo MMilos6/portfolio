@@ -1,16 +1,15 @@
 "use client";
 import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import React, { useRef, useState } from "react";
 
 const CommonContact = ({ condition }) => {
     const form = useRef();
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const [statusMessage, setStatusMessage] = useState(null);
 
     const sendEmail = (e) => {
         e.preventDefault();
-        setIsLoading(true)
+        setIsLoading(true);
         emailjs
             .sendForm(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -19,35 +18,18 @@ const CommonContact = ({ condition }) => {
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
             )
             .then(
-                (result) => {
-                    console.log(result);
-                    toast.success("Message Sent successfully!", {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: 'dark',
-                        className:'success'
-                    });
+                () => {
+                    setStatusMessage({ type: "success", text: "Message sent successfully!" });
                     document.getElementById("myForm").reset();
-                    setIsLoading(false)
                 },
-                (error) => {
-                    toast.error("Ops Message not Sent!", {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                    });
-                    setIsLoading(false)
+                () => {
+                    setStatusMessage({ type: "error", text: "Oops! Message not sent." });
                 }
-            );
+            )
+            .finally(() => {
+                setIsLoading(false);
+                setTimeout(() => setStatusMessage(null), 2000);
+            });
     };
 
     return (
@@ -57,9 +39,18 @@ const CommonContact = ({ condition }) => {
                 : "   border-[#101010]  border-2  md:p-[48px]  p-4  "
                 } rounded-xl  bg-[#0c0c0c] `}
         >
-            {isLoading && (
+            {(isLoading || statusMessage) && (
                 <div className="absolute inset-0 backdrop-blur-sm bg-black/50 z-10 flex items-center justify-center">
-                    <span className="text-2xl text-[#3d6037]">Sending...</span>
+                    {isLoading && (
+                        <span className="text-2xl text-[#3d6037]">
+                            Sending...
+                        </span>
+                    )}
+                    {!isLoading && statusMessage && (
+                        <span className={`text-2xl ${statusMessage.type === "success" ? "text-[#3d6037]" : "text-[#B03A2E]"}`}>
+                            {statusMessage.text}
+                        </span>
+                    )}
                 </div>
             )}
 

@@ -39,7 +39,7 @@ const Header = () => {
     return (
         <div className="z-50">
             <div className="container">
-                <header className="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-[1111111111]">
+            <header className="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-[1111111111] shadow-[0_4px_10px_rgba(0,0,0,1)] lg:shadow-none">
                     <div className="flex justify-between w-full px-4 lg:px-0 lg:bg-transparent bg-[#0c0c0c]">
                         <div className="flex justify-between w-full items-center space-x-4 lg:my-8 my-5">
                             <Link className="text-5xl font-semibold" href="/">
@@ -85,14 +85,14 @@ const Header = () => {
                         {menuOpen && (
                             <div
                                 ref={backdropRef}
-                                className="fixed inset-x-0 top-[84px] bottom-0 bg-black bg-opacity-70 z-[22222222222221] transition-opacity duration-200 ease-in-out"
+                                className="fixed inset-x-0 top-[88px] bottom-0 bg-black bg-opacity-70 z-[22222222222221] transition-opacity duration-200 ease-in-out"
                                 onClick={() => setMenuOpen(false)}
                             />
                         )}
 
                         <ul
                             ref={menuRef}
-                            className={`block absolute left-0 rounded-b-[20px] top-20 z-[22222222222222] w-full bg-[#101010] drop-shadow-lg py-4 transform transition-transform duration-200 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+                            className={`block absolute left-0 rounded-b-[20px] top-[88px] z-[22222222222222] w-full bg-[#101010] drop-shadow-lg py-4 transform transition-transform duration-200 ease-in-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
                         >
                             {headerNav.map(({ id, routePath, icon, name }) => (
                                 <NavLink

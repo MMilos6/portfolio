@@ -3,7 +3,6 @@ import { FaPhoneAlt, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa"
 module.exports = [
     {
         id: "01",
-        title: "Phone",
         icon: <FaPhoneAlt />,
         iconColor: "#F1A66D",
         info: (
@@ -19,7 +18,6 @@ module.exports = [
     },
     {
         id: "02",
-        title: "LinkedIn",
         icon: <FaLinkedinIn />,
         iconColor: "#0077B5",
         info: (
@@ -37,9 +35,8 @@ module.exports = [
     },
     {
         id: "03",
-        title: "GitHub",
         icon: <FaGithub />,
-        iconColor: "#656565",
+        iconColor: "#545454",
         info: (
             <p>
                 <a
@@ -55,7 +52,6 @@ module.exports = [
     },
     {
         id: "04",
-        title: "Instagram",
         icon: <FaInstagram />,
         iconColor: "#E4405F",
         info: (

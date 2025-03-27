@@ -17,7 +17,7 @@ const Social = () => {
             id: 2,
             link: "https://github.com/Mmilos6",
             icon: <FaGithub />,
-            iconClass: "text-[#181717]",
+            iconClass: "text-[#545454]",
             label: "GitHub Profile",
         },
         {

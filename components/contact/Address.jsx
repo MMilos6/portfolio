@@ -3,7 +3,7 @@ import contactData from "@/data/contactData";
 const Address = () => {
     return (
         <>
-            {contactData.map(({ title, info, icon, iconColor }, i) => (
+            {contactData.map(({ info, icon, iconColor }, i) => (
                 <div
                     key={i}
                     style={{
@@ -12,16 +12,15 @@ const Address = () => {
                     className="flex flex-wrap p-[30px] border-[#A6A6A6] gap-2 rounded-xl"
                 >
                     <div className="space-y-2">
-                        <p className="text-xl flex font-semibold text-white">
+                        <p className="text-xl flex items-center font-semibold text-white">
                             <div
-                                className="text-2xl mr-3"
+                                className="text-lg mr-2"
                                 style={{ color: iconColor }}
                             >
                                 {icon}
                             </div>
-                            {title}
+                            {info}
                         </p>
-                        <span className="break-all">{info}</span>
                     </div>
                 </div>
             ))}

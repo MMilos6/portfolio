@@ -65,6 +65,7 @@ const CommonContact = ({ condition }) => {
             <form id="myForm" ref={form} onSubmit={sendEmail}>
                 <div className="relative z-0 w-full mt-[40px] mb-8 group">
                     <input
+                        id="name"
                         type="text"
                         name="name"
                         className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm   bg-transparent border-0 border-b-[2px]  appearance-none  text-white  border-[#333333]  focus:border-[#3d6037] focus:outline-none focus:ring-0 focus:border-[#3d6037] peer"

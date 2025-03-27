@@ -15,7 +15,7 @@ const PersonalInfo = () => {
                         <p className="text-xs    text-color-910">
                             {name}
                         </p>
-                        <h6 className="font-medium  text-white">{meta}</h6>
+                        <p className="font-medium  text-white">{meta}</p>
                     </div>
                 </div>
             ))}

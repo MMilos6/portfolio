@@ -1,7 +1,10 @@
 import About from "@/components/about";
 import Service from "@/components/service/Service";
 
-export const metadata = { title: "Miloš Milovanović - Portfolio" };
+export const metadata = { 
+    title: "Miloš Milovanović - Portfolio",
+    description: "Explore the portfolio of Miloš Milovanović, a frontend developer specializing in React, Next.js, and modern web technologies."
+};
 
 const index = () => {
     return (

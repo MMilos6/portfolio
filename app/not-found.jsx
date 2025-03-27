@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-export const metadata = { title: "404 || Miloš Milovanović - Portfolio" };
+export const metadata = { 
+    title: "Miloš Milovanović - Portfolio",
+    description: "Explore the portfolio of Miloš Milovanović, a frontend developer specializing in React, Next.js, and modern web technologies."
+};
 
 const NotFound = () => {
     return (

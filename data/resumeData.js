@@ -1,5 +1,5 @@
 import { MdOutlineBusinessCenter, MdOutlineSchool } from "react-icons/md";
-import { FaRegSmile, FaRegTrophy } from "react-icons/fa";
+import { FaRegSmile } from "react-icons/fa";
 
 module.exports = [
     {
@@ -152,24 +152,18 @@ module.exports = [
         items: [
             {
                 id: 1,
-                date: "2024 - Present",
-                title: "Regular Workouts",
-                desc: "Focused on strength training and cardio for overall fitness.",
-            },
-            {
-                id: 2,
                 date: "2022 - Present",
                 title: "Bicycling Adventures",
                 desc: "Exploring new trails and routes while staying fit and enjoying nature.",
             },
             {
-                id: 3,
+                id: 2,
                 date: "2018 - Present",
                 title: "Photography Hobbyist",
                 desc: "Capturing beautiful moments and experimenting with different photography styles.",
             },
             {
-                id: 4,
+                id: 3,
                 date: "2010 - Present",
                 title: "Beer Tasting Enthusiast",
                 desc: "Exploring new craft beers while learning about brewing techniques.",

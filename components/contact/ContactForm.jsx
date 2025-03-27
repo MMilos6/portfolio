@@ -1,14 +1,16 @@
 "use client";
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import React, { useRef, useState } from "react";
 
 const CommonContact = ({ condition }) => {
     const form = useRef();
+    const [isLoading, setIsLoading] = useState(false)
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsLoading(true)
         emailjs
             .sendForm(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -27,8 +29,11 @@ const CommonContact = ({ condition }) => {
                         pauseOnHover: true,
                         draggable: true,
                         progress: undefined,
+                        theme: 'dark',
+                        className:'success'
                     });
                     document.getElementById("myForm").reset();
+                    setIsLoading(false)
                 },
                 (error) => {
                     toast.error("Ops Message not Sent!", {
@@ -40,17 +45,24 @@ const CommonContact = ({ condition }) => {
                         draggable: true,
                         progress: undefined,
                     });
+                    setIsLoading(false)
                 }
             );
     };
 
     return (
         <div
-            className={`${condition
+            className={`relative overflow-hidden ${condition
                 ? "mx-4 md:mx-[60px] p-4 md:p-16  border-[#101010]  border-2"
                 : "   border-[#101010]  border-2  md:p-[48px]  p-4  "
                 } rounded-xl  bg-[#0c0c0c] `}
         >
+            {isLoading && (
+                <div className="absolute inset-0 backdrop-blur-sm bg-black/50 z-10 flex items-center justify-center">
+                    <span className="text-2xl text-[#3d6037]">Sending...</span>
+                </div>
+            )}
+
             <h3 className="text-4xl  ">
                 <span className="font-semibold  text-white ">
                     Code. <span className="text-[#3d6037]">Design.</span> Capture.

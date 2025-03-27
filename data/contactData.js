@@ -5,66 +5,28 @@ module.exports = [
         id: "01",
         icon: <FaPhoneAlt />,
         iconColor: "#F1A66D",
-        info: (
-            <p>
-                <a
-                    href="tel:+381656848296"
-                    className="text-lg text-[#A6A6A6] hover:text-[#3d6037] duration-300"
-                >
-                    +381 65 6848 296
-                </a>
-            </p>
-        ),
+        href: "tel:+381656848296",
+        label: "+381 65 6848 296"
     },
     {
         id: "02",
         icon: <FaLinkedinIn />,
         iconColor: "#0077B5",
-        info: (
-            <p>
-                <a
-                    href="https://www.linkedin.com/in/milos--milovanovic/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg text-[#A6A6A6] hover:text-[#3d6037] duration-300"
-                >
-                    Milos Milovanovic
-                </a>
-            </p>
-        ),
+        href: "https://www.linkedin.com/in/milos--milovanovic/",
+        label: "Milos Milovanovic"
     },
     {
         id: "03",
         icon: <FaGithub />,
         iconColor: "#545454",
-        info: (
-            <p>
-                <a
-                    href="https://github.com/Mmilos6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg text-[#A6A6A6] hover:text-[#3d6037] duration-300"
-                >
-                    MMilos6
-                </a>
-            </p>
-        ),
+        href: "https://github.com/Mmilos6",
+        label: "MMilos6"
     },
     {
         id: "04",
         icon: <FaInstagram />,
         iconColor: "#E4405F",
-        info: (
-            <p>
-                <a
-                    href="https://www.instagram.com/mosquito_junior/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg text-[#A6A6A6] hover:text-[#3d6037] duration-300"
-                >
-                    mosquito_junior
-                </a>
-            </p>
-        ),
+        href: "https://www.instagram.com/mosquito_junior/",
+        label: "mosquito_junior"
     },
 ];

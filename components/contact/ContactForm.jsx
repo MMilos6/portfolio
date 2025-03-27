@@ -7,16 +7,14 @@ import "react-toastify/dist/ReactToastify.css";
 const CommonContact = ({ condition }) => {
     const form = useRef();
 
-    // use Email js for recive message
-
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs
             .sendForm(
-                "service_n4mkhz9",
-                "template_ugoztxr",
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
                 form.current,
-                "user_vYmDSd9PwIuRXUQEDjYwN"
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
             )
             .then(
                 (result) => {

@@ -22,13 +22,13 @@ const Hero = () => {
             <div className="flex space-x-3">
                 <Social />
             </div>
-            <a
+            {/* <a
                 download
                 href="/images/cv.pdf"
                 className="flex text-[#A6A6A6] items-center transition ease-linear bg-gradient-to-r from-[#3d6037] to-[#182f17] px-8 py-3 text-lg text-white rounded-[35px] mt-6 shadow-[0_5px_10px_rgba(0,0,0,1)]"
             >
                 Download CV
-            </a>
+            </a> */}
 
         </div>
     );

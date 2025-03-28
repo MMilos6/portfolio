@@ -7,6 +7,7 @@ const Address = () => {
                 <a
                     key={id}
                     href={href}
+                    target="blank"
                     style={{
                         background: "#101010",
                     }}

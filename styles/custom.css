@@ -163,18 +163,9 @@ input:-webkit-autofill:focus {
     max-width: 1220px;
 }
 
-.success {
-    background: #0c0c0c !important;
-}
-
-.success div svg {
-    fill: #3d6037;
-}
-
-.success .Toastify__progress-bar--bg {
-    background: #182f17;
-}
-
-.success .Toastify__progress-bar--success {
-    background: #3d6037;
+input,
+textarea {
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
 }

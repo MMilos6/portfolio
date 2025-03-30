@@ -19,7 +19,7 @@ module.exports = [
             {
                 id: 2,
                 date: "2012 - 2016",
-                title: "Profesional engineer of electrical engineering and computer science",
+                title: "Professional Engineer of Electrical Engineering and Computer Science",
                 desc: "School of electrical and computer engineering of applied studies",
                 href: "https://www.viser.edu.rs",
                 label: "www.viser.edu.rs",
@@ -27,7 +27,7 @@ module.exports = [
             {
                 id: 3,
                 date: "2008 - 2012",
-                title: "Electrical computer tehnics",
+                title: "Electrical Computer Tehnics",
                 desc: "High School Kolubara",
                 href: "https://www.tehnickaskolakolubara.edu.rs",
                 label: "www.tehnickaskolakolubara.edu.rs",

@@ -19,7 +19,7 @@ const index = () => {
                         Who am I?
                     </h3>
                     <p className="text-color-910 leading-7">
-                        Hi, I&apos;m 32 years old with over five years of experience as a software developer, primarily focused on frontend development, along with expertise in UI/UX design and photography. I have an excellent command of verbal and written English.
+                        Hi, I&apos;m 32 years old with over six years of experience as a software developer, primarily focused on frontend development, along with expertise in UI/UX design and photography. I have an excellent command of verbal and written English.
                     </p>
                     <p className="mt-2.5 text-color-910 leading-7">
                         I currently live in Belgrade. Passionate about self-improvement, I love exploring new technologies, tackling challenges, and putting in great effort to deliver high-quality products.

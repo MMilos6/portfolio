@@ -17,7 +17,7 @@ const NotFound = () => {
 
             <Link
                 href="/"
-                className="flex items-center mx-auto bg-gradient-to-r from-[#3d6037] to-[#182f17] duration-200 transition ease-linear hover:bg-gradient-to-l px-8 py-3 text-lg text-white rounded-[5px]"
+                className="flex text-[#A6A6A6] items-center transition-transform ease-linear duration-100 hover:-translate-y-[2px] bg-gradient-to-r from-[#3d6037] to-[#182f17] px-8 py-3 text-lg text-white rounded-[35px] mt-6 shadow-[0_5px_10px_rgba(0,0,0,1)]"
             >
                 Back To Home
             </Link>

@@ -2,8 +2,8 @@ import Address from "@/components/contact/Address";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata = { 
-    title: "Miloš Milovanović - Portfolio",
-    description: "Explore the portfolio of Miloš Milovanović, a frontend developer specializing in React, Next.js, and modern web technologies."
+    title: "Miloš Milovanović - Frontend Developer Profile",
+    description: "Discover the professional journey of Miloš Milovanović, a frontend developer with expertise in React, Next.js, and cutting-edge web technologies."
 };
 
 const index = () => {

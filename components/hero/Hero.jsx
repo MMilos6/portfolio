@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 const Hero = () => {
     const avatars = [
         '/images/about/avatar.png',
-        '/images/about/avatar2.png'
+        '/images/about/avatar2.PNG'
     ];
 
     const [currentAvatar, setCurrentAvatar] = useState('');

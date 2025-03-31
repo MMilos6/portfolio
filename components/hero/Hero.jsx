@@ -8,8 +8,8 @@ const Hero = () => {
             data-aos="fade"
         >
             <Image
-                className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px] shadow-[0_6px_10px_rgba(0,0,0,1)]"
-                src="/images/about/avatar.jpg"
+                className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px] shadow-[0_-4px_12px_rgba(0,0,0,0.5)] bg-gradient-to-b from-[#3d6037] via-[#182f17] to-transparent"
+                src="/images/about/test2.png"
                 width={250}
                 height={250}
                 priority

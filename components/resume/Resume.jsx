@@ -23,7 +23,7 @@ const Resume = () => {
                             <p className=" text-[#b7b7b7]">{desc}</p>
                             <a
                                 href={href}
-                                target="blank"
+                                target="_blank"
                                 style={{ fontStyle: "italic" }}
                                 className="break-all !mt-2 block text-[#b7b7b7] hover:text-[#3d6037]"
                             >

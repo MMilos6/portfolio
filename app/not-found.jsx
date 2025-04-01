@@ -1,10 +1,5 @@
 import Link from "next/link";
 
-export const metadata = { 
-    title: "Miloš Milovanović - Frontend Developer Profile",
-    description: "Discover the professional journey of Miloš Milovanović, a frontend developer with expertise in React, Next.js, and cutting-edge web technologies."
-};
-
 const NotFound = () => {
     return (
         <div className="mt-12 w-full h-full flex flex-col justify-center items-center">

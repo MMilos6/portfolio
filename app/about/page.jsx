@@ -1,11 +1,6 @@
 import About from "@/components/about";
 import Service from "@/components/service/Service";
 
-export const metadata = { 
-    title: "Miloš Milovanović - Frontend Developer Profile",
-    description: "Discover the professional journey of Miloš Milovanović, a frontend developer with expertise in React, Next.js, and cutting-edge web technologies."
-};
-
 const index = () => {
     return (
         <div className="container lg:rounded-2xl bg-[#0c0c0c] pb-12 px-4 sm:px-5 md:px-10 lg:px-20">

@@ -1,0 +1,162 @@
+.wrapper {
+    z-index: 50;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    max-width: 1220px;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    z-index: 1111111111;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+
+@media (min-width: 1024px) {
+    .header {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+.logoContainer {
+    width: 100%;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #0c0c0c;
+    justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+    .logoContainer {
+        padding-left: 0;
+        padding-right: 0;
+        background-color: transparent;
+    }
+}
+
+.logoContainerInner {
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+    .logoContainerInner {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.logoImg {
+    height: 40px;
+    margin-bottom: 4px;
+}
+
+.lgHidden {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .lgHidden {
+        display: none;
+    }
+}
+
+.hiddenLgBlock {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .hiddenLgBlock {
+        display: block;
+    }
+}
+
+.desktopNavList {
+    display: flex;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.navItem {
+    margin-bottom: 1px;
+}
+
+.backdrop {
+    left: 0;
+    right: 0;
+    top: 88px;
+    bottom: 0;
+    position: fixed;
+    z-index: 22222222222221;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms ease-in-out;
+}
+
+.mobileNav {
+    left: 0;
+    top: 88px;
+    width: 100%;
+    padding-top: 16px;
+    position: absolute;
+    padding-bottom: 16px;
+    z-index: 22222222222222;
+    transform: translateX(100%);
+    background-color: #101010;
+    border-radius: 0 0 20px 20px;
+    transition: transform 200ms ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNavOpen {
+    transform: translateX(0);
+}
+
+.navLink {
+    display: flex;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #A6A6A6;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+    padding: 10px 16px;
+    align-items: center;
+    background-color: #101010;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+
+.navLink.active,
+.navLink:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #3d6037, #182f17);
+}
+
+.icon {
+    height: 25px;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.mobileNav .navLink {
+    box-shadow: none;
+    padding-left: 8px;
+    padding-right: 8px;
+}

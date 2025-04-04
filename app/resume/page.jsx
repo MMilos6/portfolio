@@ -1,25 +1,26 @@
 import Tag from "@/components/tag/Tag";
 import Resume from "@/components/resume/Resume";
+import styles from "./style.module.css";
 
 const index = () => {
     return (
-        <div className="container lg:rounded-2xl bg-[#0c0c0c]">
+        <div className={styles.mainContainer}>
             <div data-aos="fade">
-                <div className="container sm:px-5 md:px-10 lg:px-20 ">
-                    <div className="py-12 px-4 mt-[70px]">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
+                <div className={styles.innerContainer}>
+                    <div className={styles.resumeSection}>
+                        <div className={styles.resumeGrid}>
                             <Resume />
                         </div>
                     </div>
                 </div>
 
-                <div className="container  bg-[#101010] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
-                    <div className="w-full">
-                        <h4 className="text-5xl text-white font-medium mb-4">
+                <div className={styles.toolsSection}>
+                    <div className={styles.toolsContent}>
+                        <h4 className={styles.title}>
                             Tools & Tech I&apos;ve used in projects
                         </h4>
 
-                        <div className="flex gap-3 flex-wrap">
+                        <div className={styles.tagsContainer}>
                             <Tag />
                         </div>
                     </div>

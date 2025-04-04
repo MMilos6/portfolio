@@ -1,20 +1,23 @@
 import techStackData from "@/data/techStackData";
+import styles from "./style.module.css";
 
 const Tag = () => {
     return (
-        <div className="space-y-6">
+        <div className={styles.tagRow}>
             {techStackData.map(({ name, icon, iconColor, tags }) => (
                 <div key={name}>
-                    <div className="flex items-center mb-2">
-                        <div className="mr-2 text-xl"
-                        style={{color: iconColor}}>
+                    <div className={styles.title}>
+                        <div
+                            className={styles.icon}
+                            style={{ color: iconColor }}
+                        >
                             {icon}
                         </div>
-                        <h2 className="text-xl text-white font-small">{name}</h2>
+                        <h2>{name}</h2>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className={styles.tag}>
                         {tags.map((tag, i) => (
-                            <button className="resume-btn text-[15px]" key={i}>
+                            <button key={i}>
                                 {tag}
                             </button>
                         ))}

@@ -1,0 +1,36 @@
+.tagRow > * + * {
+    margin-top: 1.5rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    height: 25px;
+    font-size: 20px;
+    margin-right: 0.5rem;
+}
+
+.title h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.tag {
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag button {
+    font-size: 15px;
+    cursor: default;
+    color: #A6A6A6;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background-color: #1C1C1C;
+}

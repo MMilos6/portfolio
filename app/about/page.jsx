@@ -1,18 +1,17 @@
 import About from "@/components/about";
 import Service from "@/components/service/Service";
+import styles from "./style.module.css";
 
 const index = () => {
     return (
-        <div className="container lg:rounded-2xl bg-[#0c0c0c] pb-12 px-4 sm:px-5 md:px-10 lg:px-20">
+        <div className={styles.container}>
             <div data-aos="fade">
-                <div className="py-12 mt-[70px]">
+                <div className={styles.aboutSection}>
                     <About />
                 </div>
-                <div className="pb-12 ">
-                    <h3 className="text-[35px] text-white font-medium pb-5">
-                        My expertise
-                    </h3>
-                    <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 " >
+                <div className={styles.serviceSection}>
+                    <h3 className={styles.title}>My expertise</h3>
+                    <div className={styles.serviceGrid}>
                         <Service />
                     </div>
                 </div>

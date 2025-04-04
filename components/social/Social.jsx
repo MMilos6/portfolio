@@ -1,8 +1,5 @@
-import {
-    FaGithub,
-    FaInstagram,
-    FaLinkedinIn,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import styles from "./style.module.css";
 
 const Social = () => {
     const socialContent = [
@@ -10,21 +7,21 @@ const Social = () => {
             id: 1,
             link: "https://www.linkedin.com/in/milos--milovanovic/",
             icon: <FaLinkedinIn />,
-            iconClass: "text-[#0077B5]",
+            iconClass: styles.linkedinIcon,
             label: "LinkedIn Profile",
         },
         {
             id: 2,
             link: "https://github.com/Mmilos6",
             icon: <FaGithub />,
-            iconClass: "text-[#545454]",
+            iconClass: styles.githubIcon,
             label: "GitHub Profile",
         },
         {
             id: 3,
             link: "https://www.instagram.com/mosquito_junior/",
             icon: <FaInstagram />,
-            iconClass: "text-[#E4405F]",
+            iconClass: styles.instagramIcon,
             label: "Instagram Profile",
         },
     ];
@@ -38,9 +35,11 @@ const Social = () => {
                     href={item.link}
                     rel="noopener noreferrer"
                     aria-label={item.label}
-                    className="shadow-[0_5px_10px_rgba(0,0,0,1)] rounded-[0.5rem]"
+                    className={styles.socialLink}
                 >
-                    <span className={`socialbtn ${item.iconClass}`}>{item.icon}</span>
+                    <span className={`${styles.iconWrapper} ${item.iconClass}`}>
+                        {item.icon}
+                    </span>
                 </a>
             ))}
         </>

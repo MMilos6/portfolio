@@ -1,8 +1,7 @@
-import "../styles/custom.css";
-import "../styles/globals.css";
-import Header from "@/components/header/Header";
 import Providers from "./providers";
 import metadataConfig from "../data/metadata";
+import Header from "@/components/header/Header";
+import "./style.css";
 
 export const metadata = metadataConfig;
 
@@ -14,9 +13,10 @@ export default function RootLayout({ children }) {
                 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
             </head>
             <body>
-                <div className="bg-homeBg min-h-screen bg-homeBg-dark bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+                <div className="mainContainer">
                     <Header />
                     <Providers>{children}</Providers>
                 </div>

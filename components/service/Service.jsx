@@ -1,25 +1,26 @@
 import serviceData from "@/data/serviceData";
+import styles from "./style.module.css";
 
 const Service = () => {
     return (
         <>
             {serviceData.map(({id, color, icon, title, des}) => (
                 <div
-                    className="about-box bg-transparent"
+                    className={styles.service}
                     key={id}
                 >
                     <span
-                        className='text-[30px]'
+                        className={styles.icon}
                         style={{color: color}}
                     >
                         {icon}
                     </span>
 
-                    <div className="space-y-2">
-                        <h3 className=" text-white text-xl font-semibold">
+                    <div className={styles.serviceInfo}>
+                        <h3 className={styles.title}>
                             {title}
                         </h3>
-                        <p className=" leading-8  text-[#A6A6A6]">
+                        <p className={styles.info}>
                             {des}
                         </p>
                     </div>

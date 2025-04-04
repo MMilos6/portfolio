@@ -1,16 +1,17 @@
 import Address from "@/components/contact/Address";
 import ContactForm from "@/components/contact/ContactForm";
+import styles from "./style.module.css";
 
 const index = () => {
     return (
-        <div className="container lg:rounded-2xl bg-[#0c0c0c] ">
+        <div className={styles.mainContainer}>
             <div data-aos="fade">
-                <div className="py-12 mt-[70px] px-4 sm:px-5 md:px-10 lg:px-20">
-                    <div className="lg:flex gap-x-20">
-                        <div className="w-full xl:w-[40%] space-y-6">
+                <div className={styles.contentWrapper}>
+                    <div className={styles.flexContainer}>
+                        <div className={styles.addressWrapper}>
                             <Address />
                         </div>
-                        <div className="w-full mt-8 lg:mt-0 xl:w-[60%]">
+                        <div className={styles.formWrapper}>
                             <ContactForm />
                         </div>
                     </div>

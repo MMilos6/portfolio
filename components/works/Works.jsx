@@ -55,28 +55,28 @@ const Works = () => {
         <>
             <ul className="flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
                 <li
-                    className={`${test === "All" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn "
+                    className={`${test === "All" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "text-[#A6A6A6] hover:text-[#3d6037] transition duration-300 cursor-pointer"
                         } mr-2 md:mx-2`}
                     onClick={() => handleSearch("All")}
                 >
                     All
                 </li>
                 <li
-                    className={`${test === "Development" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
+                    className={`${test === "Development" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "text-[#A6A6A6] hover:text-[#3d6037] transition duration-300 cursor-pointer"
                         } mr-2 md:mx-2`}
                     onClick={() => handleSearch("Development")}
                 >
                     Development
                 </li>
                 <li
-                    className={`${test === "Design" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"
+                    className={`${test === "Design" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "text-[#A6A6A6] hover:text-[#3d6037] transition duration-300 cursor-pointer"
                         } mr-2 md:mx-2`}
                     onClick={() => handleSearch("Design")}
                 >
                     Design
                 </li>
                 <li
-                    className={`${test === "Photography" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "fillter-btn"}  mr-2 md:mx-2 `}
+                    className={`${test === "Photography" ? "text-[#3d6037] border-b-2 border-[#3d6037]" : "text-[#A6A6A6] hover:text-[#3d6037] transition duration-300 cursor-pointer"}  mr-2 md:mx-2 `}
                     onClick={() => handleSearch("Photography")}
                 >
                     Photography

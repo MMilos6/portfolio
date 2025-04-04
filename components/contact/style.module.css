@@ -1,0 +1,238 @@
+a.contactItem {
+    gap: 0.5rem;
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    color: #A6A6A6;
+    border-radius: 1rem;
+    transition-duration: 300ms;
+    background-color: #101010;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.contactItem:not(:last-child) {
+    margin-bottom: 24px;
+}
+  
+a.contactItem:hover span {
+    color: #3d6037;
+}
+
+.contactInfo {
+    color: #fff;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.25rem;
+    align-items: center;
+}
+
+.icon {
+    height: 28px;
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.label {
+    color: #A6A6A6;
+    transition-duration: 300ms;
+}
+  
+.label:hover {
+    color: #3d6037;
+}
+
+/* Contact form */
+
+.container {
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    border: 2px solid #101010;
+    background-color: #0c0c0c;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 48px;
+    }
+}
+  
+.container.success {
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+  
+.container.success.md {
+    padding: 4rem;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.backdrop {
+    z-index: 10;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.msg {
+    color: #3d6037;
+    font-size: 1.5rem;
+}
+
+.msgSuccess {
+    color: #3d6037;
+}
+  
+.msgError {
+    color: #B03A2E;
+}
+
+.formTitle {
+    font-size: 25px;
+}
+
+.upper {
+    color: #fff;
+    font-weight: 600;
+}
+
+.highlighted {
+    color: #3d6037;
+}
+
+.bottom {
+    color: #A6A6A6;
+    font-weight: 400;
+}
+
+.inputWrapper {
+    z-index: 0;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+  
+.input {
+    border: 0;
+    width: 100%;
+    color: #fff;
+    display: block;
+    padding-left: 0;
+    appearance: none;
+    padding-right: 0;
+    border-radius: 0;
+    font-size: 0.875rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    background: none !important;
+    background-color: transparent;
+    -webkit-text-fill-color: gray;
+    border-bottom: 2px solid #333333;
+    box-shadow: inset 0 0 0 1000px transparent;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #3d6037;
+    background: none !important;
+    -webkit-text-fill-color: gray;
+    box-shadow: inset 0 0 0 1000px transparent;
+    transition: background-color 5000s ease-in-out 0s;
+}
+  
+.input:autofill {
+    background-color: transparent;
+}
+  
+.formLabel {
+    left: 0;
+    top: 0.75rem;
+    font-size: 24px;
+    color: #a6a6a6;
+    position: absolute;
+    transform-origin: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-duration: 300ms;
+}
+  
+.inputWrapper .input:focus + .formLabel,
+.inputWrapper .input:not(:placeholder-shown) + .formLabel {
+    left: 0;
+    top: -1.5rem;
+    font-weight: 500;
+    color: #3d6037;
+    font-size: 0.75rem;
+    transform: scale(0.75) translateY(-1.5rem);
+}
+  
+.inputWrapper .input:placeholder-shown + .formLabel {
+    top: 0.75rem;
+    font-size: 24px;
+    transform: scale(1) translateY(0);
+}
+  
+.submitWrapper {
+    margin-top: 1rem;
+    width: max-content;
+    border-radius: 0.5rem;
+    background-color: #101010;
+    transition: all 0.3s ease-in-out;
+}
+  
+.submitButton {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    width: max-content;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    transition: ease-in duration-200;
+}
+  
+.submitButton:hover {
+    color: #fff;
+    background: linear-gradient(to right, #3d6037, #182f17);
+}
+  
+.inputWrapper .input:focus {
+    border-color: #3d6037;
+}
+  
+.inputWrapper .input:focus + .formLabel {
+    color: #3d6037;
+    transform: scale(0.75) translateY(-1.5rem);
+}
+  
+.inputWrapper .input:placeholder-shown + .formLabel {
+    top: 0.75rem;
+    font-size: 16px;
+    transform: scale(1) translateY(0);
+}
+  
+.inputWrapper .input:focus:not(:placeholder-shown) + .formLabel {
+    color: #3d6037;
+    font-size: 0.75rem;
+    transform: scale(0.75) translateY(-1.5rem);
+}
+  
+.inputWrapper .input:focus + .formLabel,
+.inputWrapper .input:not(:placeholder-shown) + .formLabel {
+    left: 0;
+    top: 0.35rem;
+    color: #3d6037;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transform: scale(0.75) translateY(-1.5rem);
+}  

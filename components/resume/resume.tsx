@@ -145,13 +145,13 @@ export const Resume = () => {
                             </span>
                             <h3 className={styles.itemTitle}>{title}</h3>
                             <p className={styles.desc}>{desc}</p>
-                            <a
+                            {href && <a
                                 href={href}
                                 target="_blank"
                                 className={styles.link}
                             >
                                 {label}
-                            </a>
+                            </a>}
                         </div>
                     ))}
                 </div>

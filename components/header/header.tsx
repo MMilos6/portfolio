@@ -71,7 +71,7 @@ const NavLink: FC<NavLinkProps> = ({ routePath, icon, name, pathname, onClick })
 
     return (
         <li className={styles.navItem}>
-            <Link href={routePath} onClick={onClick} className={activeClass}>
+            <Link href={routePath} aria-label={`Go to ${name}`} onClick={onClick} className={activeClass}>
                 <span className={styles.icon}>{icon}</span>
                 {name}
             </Link>
@@ -91,7 +91,7 @@ export const Header: FC = () => {
                 <header className={styles.header}>
                     <div className={styles.logoContainer}>
                         <div className={styles.logoContainerInner}>
-                            <Link className={styles.logoImg} href="/">
+                            <Link className={styles.logoImg} href="/" aria-label="Home" >
                                 <Logo />
                             </Link>
 

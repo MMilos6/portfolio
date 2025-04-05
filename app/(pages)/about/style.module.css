@@ -1,0 +1,71 @@
+/* General Container Styles */
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 1rem 3rem;
+    background-color: #0c0c0c;
+}
+
+/* Responsive Container Padding and Max Width */
+@media (min-width: 640px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        border-radius: 16px;
+        max-width: calc(100% - 32px);
+    }
+}
+
+@media (min-width: 1252px) {
+    .container {
+        max-width: 1220px;
+    }
+}
+
+/* About Section */
+.aboutSection {
+    padding: 3rem 0;
+    margin-top: 70px;
+}
+
+/* Service Section */
+.serviceSection {
+    padding-bottom: 3rem;
+}
+
+/* Title Styling */
+.title {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    padding-bottom: 1.25rem;
+}
+
+/* Service Grid */
+.serviceGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .serviceGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .serviceGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

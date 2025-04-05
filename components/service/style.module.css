@@ -1,0 +1,27 @@
+.service {
+    gap: 1rem;
+    display: flex;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid #212121;
+    background-color: transparent;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.serviceInfo > * + * {
+    margin-top: 0.5rem;
+}
+
+.title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.info {
+    color: #A6A6A6;
+    line-height: 2rem;
+}

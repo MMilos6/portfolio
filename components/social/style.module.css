@@ -1,0 +1,36 @@
+.socialLink {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.iconWrapper {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    justify-content: center;
+    background-color: #101010;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.iconWrapper:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #3d6037, #182f17);
+}
+
+.linkedinIcon {
+    color: #0077B5;
+}
+
+.githubIcon {
+    color: #545454;
+}
+
+.instagramIcon {
+    color: #E4405F;
+}

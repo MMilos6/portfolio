@@ -1,0 +1,139 @@
+.container {
+    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@media (min-width: 768px) {
+    .container {
+      gap: 2.5rem;
+    }
+}
+
+.imageWrapper {
+    grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+    .imageWrapper {
+      grid-column: span 4;
+    }
+}
+
+.image {
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 35px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .image {
+      width: 330px;
+      height: 400px;
+    }
+}
+
+.aboutWrapper {
+    display: block;
+    grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+    .aboutWrapper {
+      grid-column: span 8;
+    }
+}
+
+.aboutWrapper > * + * {
+    margin-top: 0.625rem;
+}
+
+@media (min-width: 768px) {
+    .top {
+      margin-right: 3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .top {
+      margin-right: 4rem;
+    }
+}
+
+.title {
+    color: #fff;
+    font-weight: 500;
+    margin-top: -8px;
+    font-size: 25px;
+    margin-bottom: 0.625rem;
+}
+
+.descTop, .descBottom {
+    color: #a6a6a6;
+    line-height: 1.75rem;
+}
+
+.descBottom {
+    margin-top: 0.625rem;
+}
+
+.personalTitle {
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.personalWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .personalWrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.personal {
+    display: flex;
+}
+
+.icon {
+    width: 3rem;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    margin-right: 0.625rem;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: #101010;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.right > * + * {
+    margin-top: 4px;
+}
+
+.right .title {
+    margin: 0;
+    color: #a6a6a6;
+    font-size: 0.75rem;
+}
+
+.right .subTitle {
+    color: #fff;
+    font-weight: 500;
+}
+
+.right .subTitle a {
+    transition: color 300ms;
+}
+
+.right .subTitle a:hover {
+    color: #3d6037;
+}

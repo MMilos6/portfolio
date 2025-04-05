@@ -1,0 +1,57 @@
+.titleWrapper {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    height: 34px;
+    font-size: 28px;
+}
+
+.title {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    border: 2px solid #212121;
+    padding: 1rem 0.75rem 1rem 1.25rem;
+}
+
+.item > * + * {
+    margin-top: 0.5rem;
+}
+
+.date {
+    font-size: 14px;
+    color: #b7b7b7;
+}
+
+.itemTitle {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.desc {
+    color: #b7b7b7;
+}
+
+.link {
+    display: block;
+    color: #b7b7b7;
+    margin-top: 0.5rem;
+    font-style: italic;
+    word-break: break-all;
+}
+
+.link:hover {
+    color: #3d6037;
+}

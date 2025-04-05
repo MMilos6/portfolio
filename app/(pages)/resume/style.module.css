@@ -1,0 +1,112 @@
+.mainContainer {
+    margin: 0 auto;
+    max-width: 100%;
+    background-color: #0c0c0c;
+}
+
+@media (min-width: 1024px) {
+    .mainContainer {
+        border-radius: 16px;
+        max-width: calc(100% - 32px);
+    }
+}
+
+@media (min-width: 1252px) {
+    .mainContainer {
+        max-width: 1220px;
+    }
+}
+
+@media (min-width: 768px) {
+    .innerContainer {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .innerContainer {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+.resumeSection {
+    margin-top: 70px;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+    .resumeSection {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.resumeGrid {
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .resumeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .resumeGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.toolsSection {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    background-color: #101010;
+}
+
+@media (min-width: 640px) {
+    .toolsSection {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .toolsSection {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .toolsSection {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+}
+
+.toolsContent {
+    width: 100%;
+}
+
+.toolsContent .title {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.tagsContainer {
+    gap: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+}

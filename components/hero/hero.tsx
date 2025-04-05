@@ -8,8 +8,8 @@ import { Social } from '@/components';
 import styles from './style.module.css';
 
 const avatars = [
-    "/about/avatar.png",
-    "/about/avatar2.PNG",
+    "/about/avatar.webp",
+    "/about/avatar2.webp",
 ];
 
 export const Hero = () => {

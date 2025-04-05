@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-import aboutImageSrc from '../../public/about/about.jpg';
+import aboutImageSrc from '../../public/about/about.webp';
 import { PersonalInfo } from './personalInfo';
 import styles from './style.module.css';
 

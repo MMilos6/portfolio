@@ -101,6 +101,7 @@ export const Header: FC = () => {
                                     color="#b1b1b1"
                                     toggled={menuOpen}
                                     toggle={setMenuOpen}
+                                    label='Mobile menu button'
                                 />
                             </div>
                         </div>

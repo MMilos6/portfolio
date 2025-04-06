@@ -23,7 +23,6 @@ export const techStack = defineType({
                             description: 'Enter the department/category name for the tech stack',
                             validation: Rule => Rule.required(),
                         }),
-
                         defineField({
                             name: 'icon',
                             title: 'Icon',
@@ -33,14 +32,6 @@ export const techStack = defineType({
                             },
                             description: 'Choose an icon for the tech stack category',
                         }),
-
-                        defineField({
-                            name: 'iconColor',
-                            title: 'Icon Color',
-                            type: 'color',
-                            description: 'Select a color for the icon',
-                        }),
-
                         defineField({
                             name: 'techStackSkills',
                             title: 'Tech Stack Skills/Technologies',

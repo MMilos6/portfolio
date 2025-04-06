@@ -9,11 +9,7 @@ export const heroQuery = () => `
                 "avatar1Src": media.avatar1.asset->url,
                 "avatar2Src": media.avatar2.asset->url,
             },
-        links{
-            socialLinks,
-            creativeLinks,
-            mediaLinks,
-        },
+        links,
         documents{
             "files": files[].asset->url
         }

@@ -1,4 +1,4 @@
-import { Hero } from '@/components';
+import { Hero } from '@/features';
 import { heroQuery } from '@/groq/hero';
 import { client } from '@/sanity/lib/client';
 
@@ -7,19 +7,20 @@ export default async function Home() {
         const data = await client.fetch(heroQuery());
 
         if (!data) {
-            console.warn("Hero data not found");
+            console.warn("Data not found");
             return null;
         }
 
-        console.log(data)
+        const { links, avatars, documents, biography } = data;
 
         return (
             <Hero
-                avatars={data.avatars}
-                files={data.documents.files}
-                position={data.biography.position}
-                lastName={data.biography.lastName}
-                firstName={data.biography.firstName}
+                links={links}
+                avatars={avatars}
+                files={documents.files}
+                position={biography.position}
+                lastName={biography.lastName}
+                firstName={biography.firstName}
             />
         );
     } catch (error) {

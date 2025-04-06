@@ -19,6 +19,11 @@ export const biography = defineType({
             type: 'string',
         }),
         defineField({
+            name: 'birthday',
+            title: 'Birthday',
+            type: 'date',
+        }),
+        defineField({
             name: 'position',
             title: 'Position / Role',
             type: 'string',

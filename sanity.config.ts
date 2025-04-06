@@ -6,7 +6,7 @@ import { structureTool } from 'sanity/structure';
 import { colorInput } from '@sanity/color-input';
 import { visionTool } from '@sanity/vision';
 
-import { Logo } from './components/header/logo';
+import { Logo } from './features/header/logo';
 import { apiVersion, dataset, projectId } from './sanity/env';
 import { schema } from './sanity/schemaTypes';
 import { structure } from './sanity/structure';

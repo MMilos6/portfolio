@@ -70,12 +70,9 @@
     margin-bottom: 0.625rem;
 }
 
-.descTop, .descBottom {
+.desc {
     color: #a6a6a6;
     line-height: 1.75rem;
-}
-
-.descBottom {
     margin-top: 0.625rem;
 }
 

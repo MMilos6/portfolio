@@ -3,24 +3,12 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-import { Links } from '@/components';
+import { Links } from '@/features';
 
 import styles from './style.module.css';
+import { IHeroProps } from './type/type';
 
-interface IAvatarsProps {
-    avatar1Src: string;
-    avatar2Src?: string;
-}
-
-export interface IHeroProps {
-    files?: string[];
-    lastName: string;
-    position: string;
-    firstName: string;
-    avatars: IAvatarsProps;
-}
-
-export const Hero = ({ firstName, lastName, position, avatars, files }: IHeroProps) => {
+export const Hero = ({ firstName, lastName, position, avatars, files, links }: IHeroProps) => {
     const [currentAvatar, setCurrentAvatar] = useState<string>("");
 
     useEffect(() => {
@@ -51,7 +39,7 @@ export const Hero = ({ firstName, lastName, position, avatars, files }: IHeroPro
             <p className={styles.description}>{position}</p>
 
             <div className={styles.socialWrapper}>
-                <Links />
+                <Links links={links}/>
             </div>
 
             {files && (

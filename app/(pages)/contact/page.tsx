@@ -1,4 +1,4 @@
-import { Address, Form } from '@/components';
+import { Address, Form } from '@/features';
 
 import styles from './style.module.css';
 

@@ -1,14 +1,16 @@
 import {
-    FaCamera, FaChartLine, FaCloud, FaCode, FaCogs, FaCss3Alt, FaDatabase, FaFigma, FaGitAlt,
-    FaHeadset, FaLock, FaMobileAlt, FaNodeJs, FaPaintBrush, FaProjectDiagram, FaReact, FaSearch,
-    FaShoppingCart, FaTachometerAlt, FaThumbtack, FaTools, FaUserAlt, FaWifi
+    FaBehance, FaCamera, FaChartLine, FaCloud, FaCode, FaCogs, FaCss3Alt, FaDatabase, FaDribbble,
+    FaFacebookF, FaFigma, FaGitAlt, FaGithub, FaHeadset, FaInstagram, FaLinkedinIn, FaLock,
+    FaMobileAlt, FaNodeJs, FaPaintBrush, FaProjectDiagram, FaReact, FaSearch, FaShoppingCart,
+    FaTachometerAlt, FaThumbtack, FaTools, FaTypo3, FaUserAlt, FaWifi, FaYoutube
 } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 type IconMap = {
     [key: string]: React.ComponentType;
 };
 
-const iconsMap: IconMap = {
+export const iconsMap: IconMap = {
     FaCamera: FaCamera,
     FaGitAlt: FaGitAlt,
     FaHeadset: FaHeadset,
@@ -32,6 +34,15 @@ const iconsMap: IconMap = {
     FaFigma: FaFigma,
     FaProjectDiagram: FaProjectDiagram,
     FaShoppingCart: FaShoppingCart,
+    FaGithub: FaGithub,
+    FaLinkedin: FaLinkedinIn,
+    FaInstagram: FaInstagram,
+    FaBehance: FaBehance,
+    FaYoutube: FaYoutube,
+    FaFacebook: FaFacebookF,
+    FaDribbble: FaDribbble,
+    FaX: FaXTwitter,
+    Fa_type: FaTypo3
 };
 
 export default iconsMap;

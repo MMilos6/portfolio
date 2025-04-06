@@ -20,6 +20,12 @@
     }
 }
 
+@media (max-width: 1024px) and (max-height: 699px) {
+    .heroContainer {
+        height: auto !important;
+    }
+}
+
 .avatarWrapper {
     width: 250px;
     height: 250px;

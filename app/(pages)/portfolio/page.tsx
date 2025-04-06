@@ -1,4 +1,4 @@
-import { Works } from '@/components';
+import { Works } from '@/features';
 
 import styles from './style.module.css';
 

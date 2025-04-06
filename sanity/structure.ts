@@ -1,15 +1,28 @@
-import type {StructureResolver} from 'sanity/structure'
+import { DocumentIcon, UserIcon } from '@sanity/icons';
 
-// https://www.sanity.io/docs/structure-builder-cheat-sheet
+import type { StructureResolver } from 'sanity/structure'
+
 export const structure: StructureResolver = (S) =>
-  S.list()
-    .title('Blog')
-    .items([
-      S.documentTypeListItem('post').title('Posts'),
-      S.documentTypeListItem('category').title('Categories'),
-      S.documentTypeListItem('author').title('Authors'),
-      S.divider(),
-      ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['post', 'category', 'author'].includes(item.getId()!),
-      ),
-    ])
+    S.list()
+        .title('Portfolio Settings')
+        .items([
+            S.listItem()
+                .title('Personal Info')
+                .icon(UserIcon)
+                .child(
+                    S.editor()
+                        .title('Personal Info')
+                        .schemaType('personalInfo')
+                        .documentId('personalInfo')
+                ),
+            S.listItem()
+                .title('Resume')
+                .icon(DocumentIcon)
+                .child(
+                    S.editor()
+                        .title('Resume')
+                        .schemaType('resume')
+                        .documentId('resume')
+                ),
+            S.divider(),
+        ])

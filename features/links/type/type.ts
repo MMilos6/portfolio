@@ -19,5 +19,7 @@ export interface ILinksProp {
 }
 
 export interface ILinksData {
+    phone?: string;
+    type?: '1' | '2';
     links: ILinksProp;
 }

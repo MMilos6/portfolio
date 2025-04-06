@@ -1,5 +1,5 @@
 import { Hero } from '@/features';
-import { heroQuery } from '@/groq/hero';
+import { heroQuery } from '@/groq';
 import { client } from '@/sanity/lib/client';
 
 export default async function Home() {

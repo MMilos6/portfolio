@@ -103,7 +103,7 @@ const data: TechnologySection[] = [
     }
 ];
 
-export const Skill = () => {
+export const TechStack = () => {
     return (
         <div className={styles.tagRow}>
             {data.map(({ name, icon, iconColor, tags }) => (

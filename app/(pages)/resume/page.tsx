@@ -1,5 +1,5 @@
 
-import { Resume, Skill } from '@/components';
+import { Resume, TechStack } from '@/components';
 
 import styles from './style.module.css';
 
@@ -22,7 +22,7 @@ export default function Index() {
                         </h4>
 
                         <div className={styles.tagsContainer}>
-                            <Skill />
+                            <TechStack />
                         </div>
                     </div>
                 </div>

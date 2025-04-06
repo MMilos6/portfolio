@@ -5,7 +5,6 @@ import {
 
 import styles from './style.module.css';
 
-// Define the type for each service item
 interface ServiceItem {
     id: string;
     icon: ReactElement;
@@ -73,7 +72,6 @@ const data: ServiceItem[] = [
     }
 ];
 
-// Use the ServiceItem type to ensure type safety for each item
 export const Service = () => {
     return (
         <>

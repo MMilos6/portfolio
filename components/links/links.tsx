@@ -12,7 +12,7 @@ interface SocialContent {
     label: string;
 }
 
-export const Social = () => {
+export const Links = () => {
     // Define social content data with type safety
     const socialContent: SocialContent[] = [
         {

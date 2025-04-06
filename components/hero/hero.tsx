@@ -3,52 +3,71 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-import { Social } from '@/components';
+import { Links } from '@/components';
 
 import styles from './style.module.css';
 
-const avatars = [
-    "/about/avatar.webp",
-    "/about/avatar2.webp",
-];
+interface IAvatarsProps {
+    avatar1Src: string;
+    avatar2Src?: string;
+}
 
-export const Hero = () => {
+export interface IHeroProps {
+    files?: string[];
+    lastName: string;
+    position: string;
+    firstName: string;
+    avatars: IAvatarsProps;
+}
+
+export const Hero = ({ firstName, lastName, position, avatars, files }: IHeroProps) => {
     const [currentAvatar, setCurrentAvatar] = useState<string>("");
 
     useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * avatars.length);
-        setCurrentAvatar(avatars[randomIndex]);
-    }, []);
+        const avatarUrls = [avatars.avatar1Src];
+
+        if (avatars.avatar2Src) {
+            avatarUrls.push(avatars.avatar2Src);
+        }
+
+        const randomAvatar = avatarUrls[Math.floor(Math.random() * avatarUrls.length)];
+        setCurrentAvatar(randomAvatar);
+    }, [avatars]);
 
     return (
         <div className={styles.heroContainer} data-aos="fade">
             <div className={styles.avatarWrapper}>
-                <Image
+                {currentAvatar && <Image
                     priority
                     width={250}
                     height={250}
-                    alt="Miloš Milovanović avatar"
+                    alt={`${firstName} ${lastName} avatar`}
                     className={styles.avatarImage}
-                    src={currentAvatar || avatars[0]}
-                />
+                    src={currentAvatar}
+                />}
             </div>
 
-            <h3 className={styles.name}>Miloš Milovanović</h3>
-            <p className={styles.description}>
-                Frontend Developer | Graphic Designer | Photographer
-            </p>
+            <h3 className={styles.name}>{firstName} {lastName}</h3>
+            <p className={styles.description}>{position}</p>
 
             <div className={styles.socialWrapper}>
-                <Social />
+                <Links />
             </div>
 
-            <a
-                download
-                className={styles.downloadButton}
-                href="/images/CV_Milos_Milovanovic.pdf"
-            >
-                Download CV
-            </a>
+            {files && (
+                <div className={styles.downloadWrapper}>
+                    {files.map((fileUrl, index) => (
+                        <a
+                            key={index}
+                            download
+                            className={styles.downloadButton}
+                            href={fileUrl}
+                        >
+                            Download CV
+                        </a>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

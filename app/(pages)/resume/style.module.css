@@ -24,13 +24,6 @@
     }
 }
 
-@media (min-width: 1024px) {
-    .innerContainer {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-}
-
 .resumeSection {
     margin-top: 70px;
     padding-top: 3rem;
@@ -87,8 +80,6 @@
 
 @media (min-width: 1024px) {
     .toolsSection {
-        padding-left: 5rem;
-        padding-right: 5rem;
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
     }

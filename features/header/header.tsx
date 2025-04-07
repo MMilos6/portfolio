@@ -80,7 +80,12 @@ export const Header: FC = () => {
                 <header className={styles.header}>
                     <div className={styles.logoContainer}>
                         <div className={styles.logoContainerInner}>
-                            <Link className={styles.logoImg} href="/" aria-label="Home" >
+                            <Link
+                                href="/"
+                                aria-label="Home"
+                                className={styles.logoImg}
+                                onClick={() => setMenuOpen(false)}
+                            >
                                 <Logo />
                             </Link>
 

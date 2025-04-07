@@ -7,11 +7,10 @@ export default function Index() {
         <div className={styles.container}>
             <div data-aos="fade">
                 <div className={styles.inner}>
-                    <div className={styles.works}>
-                        <Works />
-                    </div>
+                    <Works />
                 </div>
             </div>
         </div>
+
     );
 };

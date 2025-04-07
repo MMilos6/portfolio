@@ -7,25 +7,12 @@ import React, { FC, useRef, useState } from 'react';
 import { AiOutlineHome } from 'react-icons/ai';
 import { CgNotes } from 'react-icons/cg';
 import { FaUser } from 'react-icons/fa';
+import { FiCodesandbox } from 'react-icons/fi';
 import { RiContactsBookLine } from 'react-icons/ri';
 
 import { Logo } from './logo';
 import styles from './style.module.css';
-
-interface NavItem {
-    id: string;
-    name: string;
-    routePath: string;
-    icon: React.ReactElement;
-}
-
-interface NavLinkProps {
-    routePath: string;
-    icon: React.ReactElement;
-    name: string;
-    pathname: string;
-    onClick: () => void;
-}
+import { NavItem, NavLinkProps } from './type/type';
 
 const data: NavItem[] = [
     {
@@ -46,12 +33,12 @@ const data: NavItem[] = [
         routePath: "/resume",
         icon: <CgNotes />,
     },
-    // {
-    //     id: "4",
-    //     name: "Portfolio",
-    //     routePath: "/portfolio",
-    //     icon: <FiCodesandbox />,
-    // },
+    {
+        id: "4",
+        name: "Work",
+        routePath: "/work",
+        icon: <FiCodesandbox />,
+    },
     {
         id: "5",
         name: "Contact",
@@ -61,7 +48,9 @@ const data: NavItem[] = [
 ];
 
 const isActiveLink = (menuPath: string, routePath: string): boolean => {
-    return menuPath.replace(/\/\d+/, "") === routePath.replace(/\/\d+/, "");
+    const cleanedMenu = menuPath.replace(/\/\d+/, "").replace(/^\/|\/$/g, "");
+    const cleanedRoute = routePath.replace(/\/\d+/, "").replace(/^\/|\/$/g, "");
+    return cleanedRoute === cleanedMenu || cleanedRoute.startsWith(`${cleanedMenu}/`);
 };
 
 const NavLink: FC<NavLinkProps> = ({ routePath, icon, name, pathname, onClick }) => {

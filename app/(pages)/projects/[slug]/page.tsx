@@ -8,37 +8,45 @@ import { client } from '@/sanity/lib/client';
 import styles from '../style.module.css';
 
 interface ProjectPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
-export default async function Index({ params }: ProjectPageProps) {
-    const data = await client.fetch(projectQuery(params.slug));
+export default async function ProjectPage({ params }: ProjectPageProps) {
+    const { slug } = await params;
 
-    if (!data) {
-        notFound();
+    if (!slug) {
+        return notFound();
     }
 
-    return (
-        <div className={styles.container}>
-            <div data-aos="fade">
-                <div className={styles.inner}>
-                    <Link href="/projects" style={{ color: '#fff' }}>
-                        ← Back to all works
-                    </Link>
+    try {
+        const data = await client.fetch(projectQuery(slug));
 
-                    <h1 style={{ color: '#fff' }}>
-                        {data.projectName}
-                    </h1>
-                    <Image
-                        width={300}
-                        height={200}
-                        src={data.mainImage}
-                        alt={data.projectName}
-                    />
+        if (!data) {
+            return notFound();
+        }
+
+        return (
+            <div className={styles.container}>
+                <div data-aos="fade">
+                    <div className={styles.inner} style={{ color: '#fff' }}>
+                        <Link href="/projects">
+                            ← Back to all works
+                        </Link>
+                        <h1>{data.projectName}</h1>
+                        <Image
+                            width={400}
+                            height={300}
+                            src={data.mainImage}
+                            alt={data.projectName}
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    } catch (error) {
+        console.error('Error fetching project:', error);
+        return notFound();
+    }
 }

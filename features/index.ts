@@ -2,7 +2,7 @@ export * from './hero/hero';
 export * from './form/form';
 export * from './links/links';
 export * from './about/about';
-export * from './works/works';
+export * from './projects/projects';
 export * from './header/header';
 export * from './resume/resume';
 export * from './service/service';

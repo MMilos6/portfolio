@@ -35,8 +35,8 @@ const data: NavItem[] = [
     },
     {
         id: "4",
-        name: "Work",
-        routePath: "/work",
+        name: "Projects",
+        routePath: "/projects",
         icon: <FiCodesandbox />,
     },
     {

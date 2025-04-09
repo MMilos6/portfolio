@@ -1,8 +1,8 @@
 export interface IProjectProp {
     id: string;
     slug: string;
+    tags: string[];
     projectName: string;
-    projectTypes: string[];
     projectCardImage: string;
 }
 

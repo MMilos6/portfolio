@@ -1,6 +1,8 @@
 import { BiRocket } from 'react-icons/bi';
 import { defineField, defineType } from 'sanity';
 
+import { AutocompleteTags } from '../autocompleteTags/autocompleteTags';
+
 export const project = defineType({
     name: 'project',
     title: 'Project',
@@ -48,26 +50,32 @@ export const project = defineType({
             description: 'Main visual image used in the project detail view.',
             options: { hotspot: true },
         }),
-        defineField({
-            name: 'projectType',
+        {
             title: 'Project Type',
+            name: 'projectTypeTags',
             type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags',
+            },
             group: 'content',
-            of: [
-                { type: 'reference', to: [{ type: 'projectTypeTag' }] },
-            ],
-            validation: Rule => Rule.required(),
-        }),
-        defineField({
-            name: 'projectTechStack',
-            title: 'Technologies Used',
+            components: {
+                input: AutocompleteTags,
+            },
+        },
+        {
+            title: 'Project Tech Stack',
+            name: 'projectTechStackTags',
             type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags',
+            },
             group: 'content',
-            of: [
-                { type: 'reference', to: [{ type: 'techStackTag' }] },
-            ],
-            validation: Rule => Rule.required(),
-        }),
+            components: {
+                input: AutocompleteTags,
+            },
+        },
         defineField({
             name: 'clientName',
             title: 'Client Name',

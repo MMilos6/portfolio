@@ -7,17 +7,17 @@ import React, { useState } from 'react';
 import styles from './style.module.css';
 import { IProjectsProp } from './type/type';
 
-export const Projects = ({projects}:IProjectsProp) => {
+export const Projects = ({projects}: IProjectsProp) => {
     const [selectedTag, setSelectedTag] = useState('All');
 
     const uniqueTags = [
         'All',
-        ...Array.from(new Set(projects.flatMap(item => item.projectTypes))),
+        ...Array.from(new Set(projects.flatMap(item => item.tags))),
     ];
 
     const filterPortfolioData = (tag: string) => {
         if (tag === 'All') return projects;
-        return projects.filter(item => item.projectTypes.includes(tag));
+        return projects.filter(item => item.tags.includes(tag));
     };
 
     const filteredData = filterPortfolioData(selectedTag);

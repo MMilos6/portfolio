@@ -3,7 +3,7 @@ export const projectsQuery = () => `
         "id": _id,
         projectName, 
         "slug": slug.current,
-        "projectTypes": projectType[]->title,
+        "tags": projectTypeTags,
         "projectCardImage": projectCardImage.asset->url
     }
 `;

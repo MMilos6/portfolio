@@ -28,13 +28,6 @@
     margin-bottom: 30px;
 }
 
-@media (min-width: 768px) {
-    .image {
-      width: 330px;
-      height: 400px;
-    }
-}
-
 .aboutWrapper {
     display: block;
     grid-column: span 12;

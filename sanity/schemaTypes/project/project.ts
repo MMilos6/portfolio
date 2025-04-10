@@ -104,12 +104,19 @@ export const project = defineType({
             description: 'Live project URL (if available).',
         }),
         defineField({
-            name: 'projectDescription',
-            title: 'Project Description',
+            name: 'projectDescriptionFirst',
+            title: 'Project Description (Intro)',
             type: 'text',
             group: 'content',
-            rows: 5,
+            rows: 4,
             validation: Rule => Rule.required(),
+        }),
+        defineField({
+            name: 'projectDescriptionSecond',
+            title: 'Project Description (Details)',
+            type: 'text',
+            group: 'content',
+            rows: 4,
         }),
         defineField({
             name: 'seoTitle',

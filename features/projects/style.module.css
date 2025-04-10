@@ -72,6 +72,7 @@
 
 .title {
     color: #fff;
+    margin-top: 5px;
     font-weight: 600;
     font-size: 1.25rem;
 }
@@ -79,5 +80,18 @@
 .image {
     width: 100%;
     height: auto;
+    object-fit: cover;
     border-radius: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    .image {
+        height: 350px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .image {
+        height: 216px;
+    }
 }

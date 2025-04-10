@@ -1,0 +1,41 @@
+.autocompleteWrapper span {
+    border-radius: 1px;
+}
+
+.selectedTag {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    padding-left: 0.5rem;
+    border-radius: 4px;
+}
+
+.selectedTagDark {
+    background: #1b1d20;
+}
+
+.selectedTagLight {
+    border: 1px solid #9ea6b3;
+    background: #ffffff;
+}
+
+.removeButton {
+    margin: 7px 5px 0;
+    font-size: 24px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .removeButtonDark :hover {
+        background: #33373c;
+        border-radius: 4px;
+    }
+
+    .removeButtonLight :hover {
+        background: #9ea6b3;
+        border-radius: 4px;
+    }
+}

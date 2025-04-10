@@ -1,0 +1,98 @@
+.tagWrapper {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.tagBtn {
+    font-size: 20px;
+    color: #a6a6a6;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: 0.2s all ease-in-out;
+}
+
+.tagBtn:hover,
+.tagBtnActive {
+    color: #3d6037;
+}
+
+.projectsGrid {
+    display: grid;
+    gap: 2rem;
+    padding-top: 3rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .projectsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .projectsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project {
+    gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.75rem;
+    border: 2px solid #212121;
+    background-color: transparent;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.hover {
+    opacity: 0;
+    z-index: 10;
+    display: flex;
+    font-size: 20px;
+    color: #a6a6a6;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    transition: .2s all ease-in-out;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.project:hover .hover {
+    opacity: 1;
+}
+
+.projectInner {
+    width: 100%;
+}
+
+.title {
+    color: #fff;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    .image {
+        height: 350px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .image {
+        height: 216px;
+    }
+}

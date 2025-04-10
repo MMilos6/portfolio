@@ -1,7 +1,8 @@
+import { BiRocket } from 'react-icons/bi';
+
 import { DocumentIcon, UserIcon } from '@sanity/icons';
 
 import type { StructureResolver } from 'sanity/structure'
-
 export const structure: StructureResolver = (S) =>
     S.list()
         .title('Portfolio Settings')
@@ -25,4 +26,16 @@ export const structure: StructureResolver = (S) =>
                         .documentId('resume')
                 ),
             S.divider(),
+            S.listItem()
+                .title('Projects')
+                .icon(BiRocket)
+                .schemaType('project')
+                .child(
+                    S.documentTypeList('project')
+                        .title('Projects')
+                        .child(
+                            S.document()
+                                .schemaType('project')
+                        )
+                ),
         ])

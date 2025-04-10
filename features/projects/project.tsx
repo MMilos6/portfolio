@@ -29,11 +29,12 @@ export const Project = ({ project }: IProjectProp) => {
             <div className={styles.container}>
                 <div className={styles.imageWrapper}>
                     <Image
+                        role='img'
                         width={322}
                         height={216}
-                        alt="routePath"
-                        src={mainImage || ""}
+                        src={mainImage}
                         className={styles.image}
+                        alt={`Main image for project: ${projectName}`}
                     />
                 </div>
                 <div className={styles.aboutWrapper}>
@@ -42,7 +43,14 @@ export const Project = ({ project }: IProjectProp) => {
                             {projectName}
                             {projectLink &&
                                 <div className={styles.tag}>
-                                    <Link className={styles.vissitLink} href={projectLink}>Live Preview</Link>
+                                    <Link
+                                        target='_blank'
+                                        href={projectLink}
+                                        className={styles.vissitLink}
+                                        aria-label={`Live preview of ${projectName}`}
+                                    >
+                                        Live Preview
+                                    </Link>
                                 </div>
                             }
                         </h3>
@@ -56,40 +64,61 @@ export const Project = ({ project }: IProjectProp) => {
             <div className={styles.tagsWrapper}>
                 <h3 className={styles.techTitle}>
                     <FaCode style={{ color: randomColors[0] }} />
-                    Project type :
+                    Project type<span>:</span>
                 </h3>
                 {projectTypeTags.map((type, i) => (
-                    <button key={i}>{type.toLocaleLowerCase()}</button>
+                    <button
+                        key={i}
+                        aria-label={`Filter by project type: ${type}`}
+                    >
+                        {type}
+                    </button>
                 ))}
             </div>
             <div className={styles.tagsWrapper}>
                 <h3 className={styles.techTitle}>
                     <FaProjectDiagram style={{ color: randomColors[1] }} />
-                    Used technologies :
+                    Used technologies<span>:</span>
                 </h3>
                 {projectTechStackTags.map((tech, i) => (
-                    <button key={i}>{tech.toLocaleLowerCase()}</button>
+                    <button
+                        key={i}
+                        aria-label={`Filter by technology: ${tech}`}
+                    >
+                        {tech}
+                    </button>
                 ))}
             </div>
             <div className={styles.tagsWrapper}>
                 <h3 className={styles.techTitle}>
                     <FaLink style={{ color: randomColors[2] }} />
-                    Associated with :
+                    Associated with<span>:</span>
                 </h3>
-                <button>
+                <button
+                    aria-label={
+                        associatedWith && associatedWithUrl
+                            ? `Visit associated link for ${associatedWith}`
+                            : 'Freelance'
+                    }>
                     {associatedWith && associatedWithUrl ?
-                        <Link href={associatedWithUrl}>{associatedWith.toLocaleLowerCase()}</Link>
+                        <Link
+                            target='_blank'
+                            href={associatedWithUrl}
+                            aria-label={`Visit ${associatedWith}`}
+                        >
+                            {associatedWith}
+                        </Link>
                         :
-                        'Freelence'
+                        'Freelance'
                     }
                 </button>
             </div>
             <div className={styles.tagsWrapper}>
                 <h3 className={styles.techTitle}>
                     <FaUser style={{ color: randomColors[3] }} />
-                    Client :
+                    Client<span>:</span>
                 </h3>
-                <button>{clientName}</button>
+                <button aria-label={`Client: ${clientName}`}>{clientName}</button>
             </div>
         </>
     );

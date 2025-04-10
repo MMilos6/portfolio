@@ -40,7 +40,9 @@
     width: max-content;
     text-decoration: none;
     margin-bottom: 30px;
-    display: block;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
     transition: .1s all ease-in-out;
 }
 
@@ -49,7 +51,7 @@
 }
 
 a.mobileLink {
-    display: block;
+    display: flex;
     margin: 40px 0 0;
 }
 

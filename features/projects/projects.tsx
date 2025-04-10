@@ -28,6 +28,7 @@ export const Projects = ({projects}: IProjectsProp) => {
                 {uniqueTags.map(tag => (
                     <button
                         key={tag}
+                        aria-label={`Filter by ${tag}`}
                         onClick={() => setSelectedTag(tag)}
                         className={`${styles.tagBtn} ${tag === selectedTag ? styles.tagBtnActive : ''}`}
                     >
@@ -39,14 +40,15 @@ export const Projects = ({projects}: IProjectsProp) => {
             <div className={styles.projectsGrid}>
                 {filteredData.map(({ id, slug, projectName, projectCardImage }) => (
                     <Link key={id} className={styles.project} href={`/projects/${slug}`}>
-                        <span className={styles.hover}>See more</span>
+                        <span className={styles.hover} aria-label={`View more details about ${projectName}`}>See more</span>
                         <div className={styles.projectInner}>
                             <Image
                                 width={300}
                                 height={200}
-                                alt={projectName}
                                 src={projectCardImage}
                                 className={styles.image}
+                                aria-label={`Project ${projectName} image`}
+                                alt={`Image of the project ${projectName}`}
                             />
                             <h3 className={styles.title}>{projectName}</h3>
                         </div>

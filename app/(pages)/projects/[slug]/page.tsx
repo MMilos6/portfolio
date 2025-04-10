@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { FaArrowLeft } from 'react-icons/fa';
 
 import { Project } from '@/features';
 import { projectQuery } from '@/groq';
@@ -10,7 +11,7 @@ import styles from '../style.module.css';
 
 interface ProjectPageProps {
     params: Promise<{ slug: string }>
-  }
+}
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
     const { slug } = await params;
@@ -67,11 +68,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <div data-aos="fade">
                     <div className={styles.inner}>
                         <Link href="/projects">
-                            ← Back to all works
+                            <FaArrowLeft /> Back to all works
                         </Link>
                         <Project project={project} />
                         <Link className={styles.mobileLink} href="/projects">
-                            ← Back to all works
+                            <FaArrowLeft /> Back to all works
                         </Link>
                     </div>
                 </div>

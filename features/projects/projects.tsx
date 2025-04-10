@@ -31,7 +31,7 @@ export const Projects = ({projects}: IProjectsProp) => {
                         onClick={() => setSelectedTag(tag)}
                         className={`${styles.tagBtn} ${tag === selectedTag ? styles.tagBtnActive : ''}`}
                     >
-                        {tag}
+                        {tag.toLocaleLowerCase()}
                     </button>
                 ))}
             </div>

@@ -7,7 +7,7 @@
 
 @media (min-width: 640px) {
     .container {
-        padding: 0 1.25rem;
+        padding: 0 1.25rem 0;
     }
 }
 
@@ -37,6 +37,7 @@
 .inner > a {
     font-size: 16px;
     color: #888;
+    width: max-content;
     text-decoration: none;
     margin-bottom: 30px;
     display: block;
@@ -45,4 +46,15 @@
 
 .inner > a:hover {
     color: #fff;
+}
+
+a.mobileLink {
+    display: block;
+    margin: 40px 0 0;
+}
+
+@media (min-width: 768px) {
+    a.mobileLink {
+        display: none;
+    }
 }

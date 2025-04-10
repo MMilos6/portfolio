@@ -12,6 +12,7 @@ export const projectQuery = (slug: string) => `
         associatedWith,
         associatedWithUrl,
         seoTitle,
-        seoDescription
+        seoDescription,
+        projectLink
     }
 `;

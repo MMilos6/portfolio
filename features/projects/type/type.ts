@@ -9,10 +9,11 @@ export interface IProjectAllProp extends IProjectCardProp{
     seoTitle: string;
     mainImage: string;
     clientName: string;
+    projectLink?: string;
     seoDescription: string;
     associatedWith?: string;
     projectTypeTags: string[];
-    associatedWithUrl: string;
+    associatedWithUrl?: string;
     projectTechStackTags: string[];
     projectDescriptionFirst: string;
     projectDescriptionSecond?: string;

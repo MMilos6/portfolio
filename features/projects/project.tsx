@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaCode, FaLink, FaProjectDiagram, FaUser, FaUsers } from 'react-icons/fa';
+import { FaCode, FaIndustry, FaLink, FaProjectDiagram, FaUser, FaUsers } from 'react-icons/fa';
 
 import { getRandomColors } from '@/shared';
 
@@ -73,7 +73,7 @@ export const Project = ({ project }: IProjectProp) => {
             </div>
             <div className={styles.tagsWrapper}>
                 <h3 className={styles.techTitle}>
-                    <FaUser style={{ color: randomColors[1] }} />
+                    <FaIndustry style={{ color: randomColors[1] }} />
                     Project industry<span>:</span>
                 </h3>
                 <button aria-label={`Proyect industry: ${projectIndustry}`}>{projectIndustry}</button>
@@ -95,7 +95,7 @@ export const Project = ({ project }: IProjectProp) => {
             <div className={styles.tagsWrapper}>
                 <h3 className={styles.techTitle}>
                     <FaProjectDiagram style={{ color: randomColors[3] }} />
-                    Used technologies<span>:</span>
+                    Tech stack<span>:</span>
                 </h3>
                 {projectTechStackTags.map((tech, i) => (
                     <button

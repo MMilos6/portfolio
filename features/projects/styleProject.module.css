@@ -57,15 +57,15 @@
 }
 
 .title {
+    gap: 10px;
     color: #fff;
-    font-weight: 500;
-    font-size: 25px;
     display: flex;
+    font-size: 25px;
     flex-wrap: wrap;
-    column-gap: 10px;
-    justify-content: space-between;
+    font-weight: 500;
     align-items: center;
     margin-bottom: 15px;
+    justify-content: space-between;
 }
 
 .desc {

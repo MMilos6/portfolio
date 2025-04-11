@@ -131,6 +131,8 @@
     transition: color 300ms;
 }
 
-.right .subTitle a:hover {
-    color: #3d6037;
+@media (pointer: coarse) {
+    .right .subTitle a:hover {
+        color: #fff;
+    }
 }

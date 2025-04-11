@@ -102,3 +102,17 @@ a.contactItem:hover span {
 .label:hover {
     color: #3d6037;
 }
+
+@media (pointer: coarse) {
+    .iconWrapper:hover {
+        background: #101010;
+    }
+
+    a.contactItem:hover span {
+        color: #A6A6A6;
+    }
+
+    .label:hover {
+        color: #A6A6A6;
+    }
+}

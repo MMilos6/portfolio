@@ -12,9 +12,18 @@
     transition: 0.2s all ease-in-out;
 }
 
-.tagBtn:hover,
-.tagBtnActive {
+.tagBtn:hover {
     color: #3d6037;
+}
+
+@media (pointer: coarse) {
+    .tagBtn:hover {
+        color: #a6a6a6;
+    }
+}
+
+.tagBtnActive {
+    color: #3d6037 !important;
 }
 
 .projectsGrid {
@@ -64,6 +73,12 @@
 
 .project:hover .hover {
     opacity: 1;
+}
+
+@media (pointer: coarse) {
+    .project:hover .hover {
+        opacity: 0;
+    }
 }
 
 .projectInner {

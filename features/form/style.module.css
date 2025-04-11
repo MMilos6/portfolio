@@ -157,9 +157,10 @@
     transition: ease-in duration-200;
 }
   
-.submitButton:hover {
-    color: #fff;
-    background: linear-gradient(to right, #3d6037, #182f17);
+@media (pointer: coarse) {
+    .submitButton:hover {
+        background-color: transparent;
+    }
 }
   
 .inputWrapper .input:focus {

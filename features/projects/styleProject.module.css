@@ -135,9 +135,11 @@
     margin-left: 0;
 }
 
-.tag a:hover,
-.tagsWrapper button:hover a {
-    color: #3d6037;
+@media (pointer: coarse) {
+    .tag a:hover,
+    .tagsWrapper button:hover a {
+        color: #A6A6A6;
+    }
 }
 
 .tag a {

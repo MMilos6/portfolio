@@ -82,6 +82,8 @@
     background: linear-gradient(90deg, #3d6037, #182f17);
 }
 
-.downloadButton:hover {
-    transform: translateY(-2px);
+@media (pointer: coarse) {
+    .downloadButton:hover {
+        transform: none;
+    }
 }

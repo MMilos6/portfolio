@@ -49,7 +49,7 @@ export const Project = ({ project }: IProjectProp) => {
                                     <Link
                                         target='_blank'
                                         href={projectLink}
-                                        className={styles.vissitLink}
+                                        className={styles.visitLink}
                                         aria-label={`Live preview of ${projectName}`}
                                     >
                                         Live Preview

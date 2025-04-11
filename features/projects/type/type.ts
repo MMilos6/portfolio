@@ -1,10 +1,10 @@
 export interface IProjectCardProp {
     id: string;
     slug: string;
+    image: string;
     tags: string[];
     projectYear: string;
     projectName: string;
-    projectCardImage: string;
 }
 
 export interface IProjectContributorProp {
@@ -13,7 +13,6 @@ export interface IProjectContributorProp {
 }
 export interface IProjectAllProp extends IProjectCardProp{
     seoTitle: string;
-    mainImage: string;
     clientName: string;
     projectLink?: string;
     seoDescription: string;

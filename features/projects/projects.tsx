@@ -49,14 +49,14 @@ export const Projects = ({projects}: IProjectsProp) => {
             </div>
 
             <div className={styles.projectsGrid}>
-                {filteredData.map(({ id, slug, projectName, projectCardImage }) => (
+                {filteredData.map(({ id, slug, projectName, image }) => (
                     <Link key={id} className={styles.project} href={`/projects/${slug}`}>
                         <span className={styles.hover} aria-label={`View more details about ${projectName}`}>See more</span>
                         <div className={styles.projectInner}>
                             <Image
                                 width={300}
+                                src={image}
                                 height={200}
-                                src={projectCardImage}
                                 className={styles.image}
                                 aria-label={`Project ${projectName} image`}
                                 alt={`Image of the project ${projectName}`}

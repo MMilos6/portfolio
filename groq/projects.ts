@@ -5,6 +5,6 @@ export const projectsQuery = () => `
         projectYear,
         "slug": slug.current,
         "tags": projectTypeTags,
-        "projectCardImage": projectCardImage.asset->url
+        "image": image.asset->url
     }
 `;

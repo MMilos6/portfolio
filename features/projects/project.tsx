@@ -10,7 +10,7 @@ import { IProjectProp } from './type/type';
 
 export const Project = ({ project }: IProjectProp) => {
     const {
-        mainImage,
+        image,
         clientName,
         projectName,
         projectLink,
@@ -35,7 +35,7 @@ export const Project = ({ project }: IProjectProp) => {
                         role='img'
                         width={322}
                         height={216}
-                        src={mainImage}
+                        src={image}
                         className={styles.image}
                         alt={`Main image for project: ${projectName}`}
                     />

@@ -45,11 +45,11 @@
     height: 100%;
     border-radius: 50%;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(180deg, #3d6037, #182f17, transparent);
+    background: linear-gradient(180deg, var(--color-primary), var(--color-secondary), transparent);
 }
 
 .name {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 600;
     margin-top: 1.5rem;
     font-size: 1.625rem;
@@ -70,16 +70,16 @@
 
 .downloadButton {
     display: flex;
-    color: #fff;
+    color: var(--color-white);
     margin-top: 1.5rem;
     border-radius: 35px;
     align-items: center;
     text-decoration: none;
     padding: 0.75rem 2rem;
     justify-content: center;
-    transition: transform 0.1s ease-in-out;
+    transition: transform var(--transition);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
-    background: linear-gradient(90deg, #3d6037, #182f17);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
 }
 
 @media (pointer: coarse) {

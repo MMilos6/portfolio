@@ -90,7 +90,7 @@
 }
 
 .toolsContent .title {
-    color: #fff;
+    color: var(--color-white);
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 1rem;

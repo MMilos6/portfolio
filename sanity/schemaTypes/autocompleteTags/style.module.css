@@ -16,7 +16,7 @@
 
 .selectedTagLight {
     border: 1px solid #9ea6b3;
-    background: #ffffff;
+    background: var(--color-white);
 }
 
 .removeButton {

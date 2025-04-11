@@ -4,7 +4,7 @@
     overflow: hidden;
     position: relative;
     border-radius: 12px;
-    border: 2px solid #212121;
+    border: var(--border);
     background-color: #0c0c0c;
 }
 
@@ -38,12 +38,12 @@
 }
 
 .msg {
-    color: #3d6037;
+    color: var(--color-primary);
     font-size: 1.5rem;
 }
 
 .msgSuccess {
-    color: #3d6037;
+    color: var(--color-primary);
 }
   
 .msgError {
@@ -55,16 +55,16 @@
 }
 
 .upper {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 600;
 }
 
 .highlighted {
-    color: #3d6037;
+    color: var(--color-primary);
 }
 
 .bottom {
-    color: #A6A6A6;
+    color: var(--color-gray);
     font-weight: 400;
 }
 
@@ -79,7 +79,7 @@
 .input {
     border: 0;
     width: 100%;
-    color: #fff;
+    color: var(--color-white);
     display: block;
     padding-left: 0;
     appearance: none;
@@ -93,17 +93,17 @@
     -webkit-text-fill-color: gray;
     border-bottom: 2px solid #333333;
     box-shadow: inset 0 0 0 1000px transparent;
-    transition: background-color 5000s ease-in-out 0s;
+    transition: background-color var(--transition);
 }
 
 .input:focus {
     outline: none;
     box-shadow: none;
-    border-color: #3d6037;
+    border-color: var(--color-primary);
     background: none !important;
     -webkit-text-fill-color: gray;
     box-shadow: inset 0 0 0 1000px transparent;
-    transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s var(--transition);
 }
   
 .input:autofill {
@@ -114,12 +114,11 @@
     left: 0;
     top: 0.75rem;
     font-size: 24px;
-    color: #a6a6a6;
+    color: var(--color-gray);
     position: absolute;
     transform-origin: 0;
     pointer-events: none;
-    transition: all 0.3s ease;
-    transition-duration: 300ms;
+    transition: var(--transition);
 }
   
 .inputWrapper .input:focus + .formLabel,
@@ -127,7 +126,7 @@
     left: 0;
     top: -1.5rem;
     font-weight: 500;
-    color: #3d6037;
+    color: var(--color-primary);
     font-size: 0.75rem;
     transform: scale(0.75) translateY(-1.5rem);
 }
@@ -143,18 +142,18 @@
     width: max-content;
     border-radius: 0.5rem;
     background-color: #101010;
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition);
 }
   
 .submitButton {
-    color: #fff;
+    color: var(--color-white);
     cursor: pointer;
     font-weight: 600;
     width: max-content;
     border-radius: 0.5rem;
     padding: 0.5rem 1.5rem;
     background-color: transparent;
-    transition: ease-in duration-200;
+    transition: var(--transition);
 }
   
 @media (pointer: coarse) {
@@ -164,11 +163,11 @@
 }
   
 .inputWrapper .input:focus {
-    border-color: #3d6037;
+    border-color: var(--color-primary);
 }
   
 .inputWrapper .input:focus + .formLabel {
-    color: #3d6037;
+    color: var(--color-primary);
     transform: scale(0.75) translateY(-1.5rem);
 }
   
@@ -179,7 +178,7 @@
 }
   
 .inputWrapper .input:focus:not(:placeholder-shown) + .formLabel {
-    color: #3d6037;
+    color: var(--color-primary);
     font-size: 0.75rem;
     transform: scale(0.75) translateY(-1.5rem);
 }
@@ -188,7 +187,7 @@
 .inputWrapper .input:not(:placeholder-shown) + .formLabel {
     left: 0;
     top: 0.35rem;
-    color: #3d6037;
+    color: var(--color-primary);
     font-weight: 500;
     font-size: 0.95rem;
     transform: scale(0.75) translateY(-1.5rem);

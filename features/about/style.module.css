@@ -63,7 +63,7 @@
 }
 
 .title {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 500;
     margin-top: -8px;
     font-size: 25px;
@@ -71,13 +71,13 @@
 }
 
 .desc {
-    color: #a6a6a6;
+    color: var(--color-gray);
     line-height: 1.75rem;
     margin-top: 0.625rem;
 }
 
 .personalTitle {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 500;
     font-size: 25px;
     margin-top: 1.25rem;
@@ -118,21 +118,25 @@
 
 .right .title {
     margin: 0;
-    color: #a6a6a6;
+    color: var(--color-gray);
     font-size: 0.75rem;
 }
 
 .right .subTitle {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 500;
 }
 
 .right .subTitle a {
-    transition: color 300ms;
+    transition: color var(--transition);
+}
+
+.right .subTitle a:hover {
+    color: var(--color-primary);
 }
 
 @media (pointer: coarse) {
     .right .subTitle a:hover {
-        color: #fff;
+        color: var(--color-white);
     }
 }

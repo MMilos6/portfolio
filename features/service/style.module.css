@@ -3,7 +3,7 @@
     display: flex;
     padding: 1.5rem;
     border-radius: 0.75rem;
-    border: 2px solid #212121;
+    border: var(--border);
     background-color: transparent;
 }
 
@@ -16,12 +16,12 @@
 }
 
 .title {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 600;
     font-size: 1.25rem;
 }
 
 .info {
-    color: #A6A6A6;
+    color: var(--color-gray);
     line-height: 2rem;
 }

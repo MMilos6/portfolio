@@ -45,7 +45,7 @@
 
 /* Title Styling */
 .title {
-    color: #fff;
+    color: var(--color-white);
     font-size: 35px;
     font-weight: 500;
     padding-bottom: 1.25rem;

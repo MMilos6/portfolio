@@ -11,7 +11,7 @@
 }
 
 .title {
-    color: #fff;
+    color: var(--color-white);
     font-size: 26px;
     font-weight: 500;
 }
@@ -21,7 +21,7 @@
     margin-bottom: 1.5rem;
     border-radius: 0.5rem;
     flex-direction: column;
-    border: 2px solid #212121;
+    border: var(--border);
     padding: 1rem 0.75rem 1rem 1.25rem;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .itemTitle {
-    color: #fff;
+    color: var(--color-white);
     font-size: 20px;
     font-weight: 400;
 }
@@ -53,7 +53,7 @@
 }
 
 .link:hover {
-    color: #3d6037;
+    color: var(--color-primary);
 }
 
 @media (pointer: coarse) {

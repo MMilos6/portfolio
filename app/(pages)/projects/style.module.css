@@ -43,11 +43,11 @@
     display: flex;
     align-items: center;
     column-gap: 5px;
-    transition: .1s all ease-in-out;
+    transition: var(--transition);
 }
 
 .inner > a:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
 a.mobileLink {

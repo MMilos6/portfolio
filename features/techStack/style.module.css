@@ -15,7 +15,7 @@
 }
 
 .title h2 {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 400;
     font-size: 1.25rem;
 }
@@ -29,8 +29,8 @@
 .tag button {
     font-size: 15px;
     cursor: default;
-    color: #A6A6A6;
+    color: var(--color-gray);
     border-radius: 0.5rem;
     padding: 0.5rem 1.25rem;
-    background-color: #1C1C1C;
+    background-color: var(--color-bg-dark);
 }

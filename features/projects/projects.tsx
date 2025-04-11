@@ -12,7 +12,18 @@ export const Projects = ({projects}: IProjectsProp) => {
 
     const uniqueTags = [
         'All',
-        ...Array.from(new Set(projects.flatMap(item => item.tags))),
+        ...Array.from(
+          projects
+            .flatMap(item => item.tags)
+            .reduce((map, tag) => {
+                const lower = tag.toLowerCase();
+                if (!map.has(lower) || /[A-Z]/.test(tag)) {
+                    map.set(lower, tag);
+                }
+                return map;
+            }, new Map<string, string>())
+            .values()
+        ),
     ];
 
     const filterPortfolioData = (tag: string) => {
@@ -32,7 +43,7 @@ export const Projects = ({projects}: IProjectsProp) => {
                         onClick={() => setSelectedTag(tag)}
                         className={`${styles.tagBtn} ${tag === selectedTag ? styles.tagBtnActive : ''}`}
                     >
-                        {tag.toLocaleLowerCase()}
+                        {tag}
                     </button>
                 ))}
             </div>

@@ -2,6 +2,8 @@ import { BiRocket } from 'react-icons/bi';
 import { defineField, defineType } from 'sanity';
 
 import { AutocompleteTags } from '../autocompleteTags/autocompleteTags';
+import { contributors } from './contributors';
+import { projectsYearsList } from '@/sanity/shared';
 
 export const project = defineType({
     name: 'project',
@@ -50,6 +52,17 @@ export const project = defineType({
             description: 'Main visual image used in the project detail view.',
             options: { hotspot: true },
         }),
+        defineField({
+            name: 'projectYear',
+            title: 'Project Year',
+            type: 'string',
+            group: 'content',
+            validation: Rule => Rule.required(),
+            options: {
+              list: projectsYearsList.map(year => ({ title: year, value: year })),
+            },
+            description: 'The year this project was worked on.',
+        }),
         {
             title: 'Project Type',
             name: 'projectTypeTags',
@@ -83,6 +96,13 @@ export const project = defineType({
             group: 'content',
         }),
         defineField({
+            name: 'projectIndustry',
+            title: 'Project Industry',
+            type: 'string',
+            group: 'content',
+            description: 'Industry or sector this project belongs to (e.g., Healthcare, Education, Finance).',
+        }),
+        defineField({
             name: 'associatedWith',
             title: 'Associated With',
             type: 'string',
@@ -102,6 +122,14 @@ export const project = defineType({
             type: 'url',
             group: 'content',
             description: 'Live project URL (if available).',
+        }),
+        defineField({
+            name: 'contributors',
+            title: 'Contributors',
+            type: 'array',
+            of: [{ type: contributors.name }],
+            group: 'content',
+            description: 'List of people who contributed to this project.',
         }),
         defineField({
             name: 'projectDescriptionFirst',

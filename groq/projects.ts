@@ -1,7 +1,8 @@
 export const projectsQuery = () => `
-    *[_type == "project"]{
+    *[_type == "project"] | order(projectYear desc) {
         "id": _id,
-        projectName, 
+        projectName,
+        projectYear,
         "slug": slug.current,
         "tags": projectTypeTags,
         "projectCardImage": projectCardImage.asset->url

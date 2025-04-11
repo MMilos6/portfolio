@@ -13,6 +13,12 @@ export const projectQuery = (slug: string) => `
         associatedWithUrl,
         seoTitle,
         seoDescription,
-        projectLink
+        projectLink,
+        projectIndustry,
+        projectYear,
+        contributors[]{
+            name,
+            "lnProfile": linkedinUrl
+        }
     }
 `;

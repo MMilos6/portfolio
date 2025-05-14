@@ -73,7 +73,7 @@ export const Form = ({ condition }: CommonContactProps) => {
 
             <h3 className={styles.formTitle}>
                 <span className={styles.upper}>
-                    Code. <span className={styles.highlighted}>Design.</span> Capture.
+                    Code. <span className={styles.highlighted}>Design.</span> Develop.
                 </span>
                 <br />
                 <span className={styles.bottom}>

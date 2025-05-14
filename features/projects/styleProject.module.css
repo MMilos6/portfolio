@@ -135,11 +135,9 @@
     margin-left: 0;
 }
 
-@media (pointer: coarse) {
-    .tag a:hover,
-    .tagsWrapper button:hover a {
-        color: var(--color-gray);
-    }
+.tag a:hover,
+.tagsWrapper button:hover a {
+    color: var(--color-primary);
 }
 
 .tag a {

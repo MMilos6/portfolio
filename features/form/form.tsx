@@ -33,14 +33,17 @@ export const Form = ({ condition }: CommonContactProps) => {
                     () => {
                         setStatusMessage({
                             type: "success",
-                            text: "Message sent successfully!"
+                            text: "Message sent successfully!",
                         });
                         if (form.current) {
                             form.current.reset();
                         }
                     },
                     () => {
-                        setStatusMessage({ type: "error", text: "Oops! Message not sent." });
+                        setStatusMessage({
+                            type: "error",
+                            text: "Oops! Message not sent.",
+                        });
                     }
                 )
                 .finally(() => {
@@ -51,19 +54,22 @@ export const Form = ({ condition }: CommonContactProps) => {
     };
 
     return (
-        <div className={`${styles.container} ${styles[condition ? 'success' : 'false']}`}>
+        <div
+            className={`${styles.container} ${styles[condition ? "success" : "false"]}`}
+        >
             {(isLoading || statusMessage) && (
                 <div className={styles.backdrop}>
                     {isLoading && (
-                        <span className={styles.msg}>
-                            Sending...
-                        </span>
+                        <span className={styles.msg}>Sending...</span>
                     )}
                     {!isLoading && statusMessage && (
                         <span
-                            className={`${styles.msg} ${statusMessage.type &&
-                                styles[`msg${statusMessage.type.charAt(0).toUpperCase() + statusMessage.type.slice(1)}`]
-                                }`}
+                            className={`${styles.msg} ${
+                                statusMessage.type &&
+                                styles[
+                                    `msg${statusMessage.type.charAt(0).toUpperCase() + statusMessage.type.slice(1)}`
+                                ]
+                            }`}
                         >
                             {statusMessage.text}
                         </span>
@@ -73,12 +79,11 @@ export const Form = ({ condition }: CommonContactProps) => {
 
             <h3 className={styles.formTitle}>
                 <span className={styles.upper}>
-                    Code. <span className={styles.highlighted}>Design.</span> Develop.
+                    Plan. <span className={styles.highlighted}>Design.</span>{" "}
+                    Execute.
                 </span>
                 <br />
-                <span className={styles.bottom}>
-                    Let&apos;s create something awesome!
-                </span>
+                <span className={styles.bottom}>Let&apos;s make it real.</span>
             </h3>
             <form id="myForm" ref={form} onSubmit={sendEmail}>
                 <div className={styles.inputWrapper}>
@@ -90,10 +95,7 @@ export const Form = ({ condition }: CommonContactProps) => {
                         placeholder=" "
                         className={styles.input}
                     />
-                    <label
-                        htmlFor="name"
-                        className={styles.formLabel}
-                    >
+                    <label htmlFor="name" className={styles.formLabel}>
                         Name *
                     </label>
                 </div>
@@ -106,10 +108,7 @@ export const Form = ({ condition }: CommonContactProps) => {
                         name="user_email"
                         className={styles.input}
                     />
-                    <label
-                        htmlFor="user_email"
-                        className={styles.formLabel}
-                    >
+                    <label htmlFor="user_email" className={styles.formLabel}>
                         Email *
                     </label>
                 </div>
@@ -122,10 +121,7 @@ export const Form = ({ condition }: CommonContactProps) => {
                         placeholder=" "
                         className={styles.input}
                     />
-                    <label
-                        htmlFor="message"
-                        className={styles.formLabel}
-                    >
+                    <label htmlFor="message" className={styles.formLabel}>
                         Message *
                     </label>
                 </div>

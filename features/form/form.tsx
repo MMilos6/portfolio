@@ -5,18 +5,17 @@ import emailjs from '@emailjs/browser';
 
 import styles from './style.module.css';
 
-// Define prop types
 interface CommonContactProps {
     condition?: boolean;
 }
 
 export const Form = ({ condition }: CommonContactProps) => {
-    const form = useRef<HTMLFormElement | null>(null); // Type the form reference
-    const [isLoading, setIsLoading] = useState<boolean>(false); // Explicit type for loading state
+    const form = useRef<HTMLFormElement | null>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [statusMessage, setStatusMessage] = useState<{
         type: "success" | "error" | null;
         text: string;
-    } | null>(null); // Type for status message state
+    } | null>(null);
 
     const sendEmail = (e: FormEvent) => {
         e.preventDefault();

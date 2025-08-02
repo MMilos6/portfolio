@@ -11,6 +11,8 @@ export const About = ({
     phone,
     address,
     birthday,
+    lastName,
+    firstName,
     profileImgSrc,
 }: IAboutProps) => {
     return (
@@ -19,9 +21,9 @@ export const About = ({
                 <Image
                     width={300}
                     height={400}
-                    alt="routePath"
-                    src={profileImgSrc || ''} //TODO: add falback here
                     className={styles.image}
+                    src={profileImgSrc || ''} //TODO: add falback here
+                    alt={`${firstName} ${lastName}` || 'Profile Image'}
                 />
             </div>
             <div className={styles.aboutWrapper}>

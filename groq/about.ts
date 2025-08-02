@@ -2,6 +2,8 @@ export const aboutQuery = () => `
     *[_type == "personalInfo"][0]{
         biography{
             about,
+            firstName,
+            lastName,
             address,
             email,
             phone,

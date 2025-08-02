@@ -26,8 +26,10 @@ export default async function Index() {
                             phone={biography.phone}
                             about={biography.about}
                             address={biography.address}
+                            lastName={biography.lastName}
                             birthday={biography.birthday}
                             profileImgSrc={profileImgSrc}
+                            firstName={biography.firstName}
                         />
                     </div>
                     <div className={styles.serviceSection}>

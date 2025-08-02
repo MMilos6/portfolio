@@ -3,7 +3,9 @@ export interface IAboutProps {
     phone: string;
     about?: string;
     address: string;
+    lastName?: string;
     birthday: string;
+    firstName?: string;
     profileImgSrc?: string;
 }
 

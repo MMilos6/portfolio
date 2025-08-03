@@ -28,22 +28,25 @@ export const About = ({
                 />
             </div>
             <div className={styles.aboutWrapper}>
-                {about &&
+                {about && (
                     <div className={styles.top}>
-                        <h3 className={styles.title}>
-                            Who am I?
-                        </h3>
-                        <p className={styles.desc}>
-                            {about}
-                        </p>
+                        <h3 className={styles.title}>Who am I?</h3>
+                        {about.split('\n').map((line, i) => (
+                            <p className={styles.desc} key={i}>
+                                {line}
+                            </p>
+                        ))}
                     </div>
-                }
+                )}
                 <div>
-                    <h3 className={styles.personalTitle}>
-                        Personal Info
-                    </h3>
+                    <h3 className={styles.personalTitle}>Personal Info</h3>
                     <div className={styles.personalWrapper}>
-                        <PersonalInfo email={email} phone={phone} address={address} birthday={birthday} />
+                        <PersonalInfo
+                            email={email}
+                            phone={phone}
+                            address={address}
+                            birthday={birthday}
+                        />
                     </div>
                 </div>
             </div>

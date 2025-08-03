@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
+import fallbackImgSrc from '../../public/about/falback.png';
 import { PersonalInfo } from './personalInfo';
 import styles from './style.module.css';
 import { IAboutProps } from './type/type';
@@ -22,7 +23,7 @@ export const About = ({
                     width={300}
                     height={400}
                     className={styles.image}
-                    src={profileImgSrc || ''} //TODO: add falback here
+                    src={profileImgSrc || fallbackImgSrc}
                     alt={`${firstName} ${lastName}` || 'Profile Image'}
                 />
             </div>

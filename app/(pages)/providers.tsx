@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, ReactNode } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css';
+
+import AOS from 'aos';
+import { ReactNode, useEffect } from 'react';
 
 interface ProvidersProps {
     children: ReactNode;

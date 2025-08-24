@@ -4,6 +4,7 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 
 import { Header } from '@/features';
+import { Analytics } from '@vercel/analytics/next';
 
 import Providers from './providers';
 
@@ -58,6 +59,7 @@ export default function RootLayout({
                     <Header />
                     <Providers>{children}</Providers>
                 </div>
+                <Analytics />
             </body>
         </html>
     );

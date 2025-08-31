@@ -3,8 +3,6 @@
     align-items: center;
     border-radius: 0.5rem;
     justify-content: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
-    transition: background-color var(--transition);
 }
 
 .iconWrapper {
@@ -13,14 +11,13 @@
     height: 2.5rem;
     align-items: center;
     border-radius: 0.5rem;
+    border: var(--border);
     justify-content: center;
-    background-color: #101010;
-    transition: background-color var(--transition), color var(--transition);
+    backdrop-filter: var(--blur);
 }
 
 .iconWrapper:hover {
     color: var(--color-white);
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
 }
 
 .github {
@@ -65,11 +62,11 @@ a.contactItem {
     display: flex;
     padding: 30px;
     flex-wrap: wrap;
-    color: var(--color-gray);
     border-radius: 1rem;
+    border: var(--border);
+    color: var(--color-gray);
+    backdrop-filter: var(--blur);
     transition-duration: var(--transition);
-    background-color: #101010;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 a.contactItem:not(:last-child) {
@@ -77,15 +74,15 @@ a.contactItem:not(:last-child) {
 }
   
 a.contactItem:hover span {
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .contactInfo {
-    color: var(--color-white);
     display: flex;
     font-weight: 600;
     font-size: 1.25rem;
     align-items: center;
+    color: var(--color-white);
 }
 
 .icon {

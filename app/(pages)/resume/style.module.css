@@ -1,12 +1,16 @@
 .mainContainer {
-    margin: 0 auto;
+    border: none;
     max-width: 100%;
-    background-color: #0c0c0c;
+    margin: 90px auto 0;
+    backdrop-filter: var(--blur);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 1024px) {
     .mainContainer {
+        margin-top: 150px;
         border-radius: 16px;
+        border: var(--border);
         max-width: calc(100% - 32px);
     }
 }
@@ -25,7 +29,6 @@
 }
 
 .resumeSection {
-    margin-top: 70px;
     padding-top: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -61,7 +64,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 3rem;
-    background-color: #101010;
+    border-top: var(--border);
 }
 
 @media (min-width: 640px) {
@@ -80,8 +83,8 @@
 
 @media (min-width: 1024px) {
     .toolsSection {
-        border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
     }
 }
 
@@ -90,10 +93,10 @@
 }
 
 .toolsContent .title {
-    color: var(--color-white);
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 1rem;
+    color: var(--color-white);
 }
 
 .tagsContainer {

@@ -58,20 +58,20 @@
 
 .title {
     gap: 10px;
-    color: var(--color-white);
     display: flex;
     font-size: 25px;
     flex-wrap: wrap;
     font-weight: 500;
     align-items: center;
     margin-bottom: 15px;
+    color: var(--color-white);
     justify-content: space-between;
 }
 
 .desc {
-    color: var(--color-gray);
     line-height: 1.75rem;
     margin-top: 0.625rem;
+    color: var(--color-gray);
 }
 
 .tagsWrapper {
@@ -81,9 +81,9 @@
 
 @media (min-width: 768px) {
     .tagsWrapper {
+        row-gap: 8px;
         display: flex;
         flex-wrap: wrap;
-        row-gap: 8px;
         align-items: center;
         margin-bottom: 30px;
     }
@@ -91,12 +91,12 @@
 
 .techTitle {
     display: flex;
-    column-gap: 15px;
-    align-items: center;
-    color: var(--color-white);
     font-weight: 400;
+    column-gap: 15px;
     font-size: 1.25rem;
+    align-items: center;
     margin: 0 10px 10px 0;
+    color: var(--color-white);
 }
 
 .techTitle span {
@@ -115,13 +115,14 @@
 
 .tagsWrapper button {
     font-size: 15px;
+    cursor: default;
     margin-right: 8px;
     margin-bottom: 8px;
-    cursor: default;
-    color: var(--color-gray);
     border-radius: 0.5rem;
+    border: var(--border);
     padding: 0.5rem 1.25rem;
-    background-color: var(--color-bg-dark);
+    color: var(--color-gray);
+    backdrop-filter: var(--blur);
     transition: var(--transition);
 }
 
@@ -137,16 +138,17 @@
 
 .tag a:hover,
 .tagsWrapper button:hover a {
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .tag a {
     font-size: 15px;
-    color: var(--color-gray);
+    border: var(--border);
     border-radius: 0.5rem;
     padding: 0.5rem 1.25rem;
+    color: var(--color-gray);
     text-transform: capitalize;
-    background-color: var(--color-bg-dark);
+    backdrop-filter: var(--blur);
     transition: var(--transition);
 }
 

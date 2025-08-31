@@ -1,12 +1,16 @@
 .mainContainer {
-    margin: 0 auto;
+    border: none;
     max-width: 100%;
-    background-color: #0c0c0c;
+    margin: 90px auto 0;
+    backdrop-filter: var(--blur);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 1024px) {
     .mainContainer {
         border-radius: 16px;
+        margin: 150px auto 0;
+        border: var(--border);
         max-width: calc(100% - 32px);
     }
 }
@@ -18,7 +22,6 @@
 }
 
 .contentWrapper {
-    margin-top: 70px;
     padding-top: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;

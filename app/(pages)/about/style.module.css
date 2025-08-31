@@ -1,9 +1,12 @@
 /* General Container Styles */
 .container {
-    margin: 0 auto;
+    border: none;
     max-width: 100%;
+    margin: 90px auto 0;
+    height: fit-content;
     padding: 0 1rem 3rem;
-    background-color: #0c0c0c;
+    backdrop-filter: var(--blur);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Container Padding and Max Width */
@@ -21,7 +24,9 @@
 
 @media (min-width: 1024px) {
     .container {
+        margin-top: 150px;
         border-radius: 16px;
+        border: var(--border);
         max-width: calc(100% - 32px);
     }
 }
@@ -35,7 +40,6 @@
 /* About Section */
 .aboutSection {
     padding: 3rem 0;
-    margin-top: 70px;
 }
 
 /* Service Section */
@@ -45,16 +49,16 @@
 
 /* Title Styling */
 .title {
-    color: var(--color-white);
     font-size: 35px;
     font-weight: 500;
     padding-bottom: 1.25rem;
+    color: var(--color-white);
 }
 
 /* Service Grid */
 .serviceGrid {
-    display: grid;
     gap: 2rem;
+    display: grid;
     grid-template-columns: 1fr;
 }
 

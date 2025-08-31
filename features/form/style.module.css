@@ -5,7 +5,7 @@
     position: relative;
     border-radius: 12px;
     border: var(--border);
-    background-color: #0c0c0c;
+    backdrop-filter: var(--blur);
 }
 
 @media (min-width: 768px) {
@@ -32,14 +32,14 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(4px);
+    backdrop-filter: var(--blur);
     top: 0; bottom: 0; left: 0; right: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .msg {
-    color: var(--color-primary);
     font-size: 1.5rem;
+    color: var(--color-primary);
 }
 
 .msgSuccess {
@@ -55,8 +55,8 @@
 }
 
 .upper {
-    color: var(--color-white);
     font-weight: 600;
+    color: var(--color-white);
 }
 
 .highlighted {
@@ -64,8 +64,8 @@
 }
 
 .bottom {
-    color: var(--color-gray);
     font-weight: 400;
+    color: var(--color-gray);
 }
 
 .inputWrapper {
@@ -79,7 +79,6 @@
 .input {
     border: 0;
     width: 100%;
-    color: var(--color-white);
     display: block;
     padding-left: 0;
     appearance: none;
@@ -88,6 +87,7 @@
     font-size: 0.875rem;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
+    color: var(--color-white);
     background: none !important;
     background-color: transparent;
     -webkit-text-fill-color: gray;
@@ -99,27 +99,27 @@
 .input:focus {
     outline: none;
     box-shadow: none;
-    border-color: var(--color-primary);
     background: none !important;
     -webkit-text-fill-color: gray;
+    border-color: var(--color-primary);
     box-shadow: inset 0 0 0 1000px transparent;
     transition: background-color 5000s var(--transition);
 }
   
 .input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
   box-shadow: 0 0 0 1000px transparent inset !important;
   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-  transition: background-color 5000s ease-in-out 0s;
 }
   
 .formLabel {
     left: 0;
     top: 0.75rem;
     font-size: 24px;
-    color: var(--color-gray);
     position: absolute;
     transform-origin: 0;
     pointer-events: none;
+    color: var(--color-gray);
     transition: var(--transition);
 }
   
@@ -128,8 +128,8 @@
     left: 0;
     top: -1.5rem;
     font-weight: 500;
-    color: var(--color-primary);
     font-size: 0.75rem;
+    color: var(--color-primary);
     transform: scale(0.75) translateY(-1.5rem);
 }
   
@@ -142,25 +142,26 @@
 .submitWrapper {
     margin-top: 1rem;
     width: max-content;
+    border: var(--border);
     border-radius: 0.5rem;
-    background-color: #101010;
+    backdrop-filter: var(--blur);
     transition: var(--transition);
 }
   
 .submitButton {
-    color: var(--color-white);
     cursor: pointer;
     font-weight: 600;
     width: max-content;
     border-radius: 0.5rem;
     padding: 0.5rem 1.5rem;
+    color: var(--color-gray);
     background-color: transparent;
     transition: var(--transition);
 }
   
 @media (pointer: coarse) {
     .submitButton:hover {
-        background-color: transparent;
+        color: var(--color-white);
     }
 }
   
@@ -180,8 +181,8 @@
 }
   
 .inputWrapper .input:focus:not(:placeholder-shown) + .formLabel {
-    color: var(--color-primary);
     font-size: 0.75rem;
+    color: var(--color-primary);
     transform: scale(0.75) translateY(-1.5rem);
 }
   
@@ -189,8 +190,8 @@
 .inputWrapper .input:not(:placeholder-shown) + .formLabel {
     left: 0;
     top: 0.35rem;
-    color: var(--color-primary);
     font-weight: 500;
     font-size: 0.95rem;
+    color: var(--color-primary);
     transform: scale(0.75) translateY(-1.5rem);
 }

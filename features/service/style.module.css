@@ -2,8 +2,9 @@
     gap: 1rem;
     display: flex;
     padding: 1.5rem;
-    border-radius: 0.75rem;
     border: var(--border);
+    border-radius: 0.75rem;
+    backdrop-filter: var(--blur);
     background-color: transparent;
 }
 
@@ -16,12 +17,12 @@
 }
 
 .title {
-    color: var(--color-white);
     font-weight: 600;
     font-size: 1.25rem;
+    color: var(--color-white);
 }
 
 .info {
-    color: var(--color-gray);
     line-height: 2rem;
+    color: var(--color-gray);
 }

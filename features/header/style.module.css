@@ -1,5 +1,7 @@
 .wrapper {
     z-index: 50;
+    width: 100%;
+    position: fixed;
 }
 
 .container {
@@ -26,6 +28,12 @@
     .header {
         position: static;
         box-shadow: none;
+        margin-top: 20px;
+        padding: 15px 30px;
+        border-radius: 100px;
+        border: var(--border);
+        backdrop-filter: var(--blur);
+        background: rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -36,6 +44,10 @@
     padding-right: 1rem;
     background-color: #0c0c0c;
     justify-content: space-between;
+}
+
+.logoContainer a {
+    height: 40px;
 }
 
 @media (min-width: 1024px) {
@@ -58,8 +70,8 @@
 
 @media (min-width: 1024px) {
     .logoContainerInner {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -89,8 +101,6 @@
 
 .desktopNavList {
     display: flex;
-    margin-top: 48px;
-    margin-bottom: 48px;
 }
 
 .navItem {
@@ -104,8 +114,8 @@
     bottom: 0;
     position: fixed;
     z-index: 22222222222221;
-    background-color: rgba(0, 0, 0, 0.7);
     transition: var(--transition);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .mobileNav {
@@ -129,15 +139,15 @@
 
 .navLink {
     display: flex;
+    padding: 16px;
     font-size: 13px;
     cursor: pointer;
     font-weight: 500;
-    color: var(--color-gray);
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 6px;
-    padding: 10px 16px;
     align-items: center;
+    color: var(--color-gray);
     background-color: #101010;
     transition: var(--transition);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
@@ -157,6 +167,23 @@
     .navItem:last-of-type .navLink {
         margin-right: 0;
     }
+
+    .navLink {
+        padding: 10px;
+        margin-left: 0;
+        cursor: pointer;
+        margin-right: 0;
+        border-radius: 0;
+        box-shadow: none;
+        color: var(--color-gray);
+        background-color: transparent;
+    }
+
+    .navLink.active,
+    .navLink:hover {
+        background-image: none;
+        color: var(--color-white);
+    }
 }
 
 .icon {
@@ -173,7 +200,7 @@
 
 @media (pointer: coarse) {
     .navLink:hover {
-        color: var(--color-gray);
         background-image: none;
+        color: var(--color-gray);
     }
 }

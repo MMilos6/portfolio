@@ -2,6 +2,7 @@ export * from './hero/hero';
 export * from './form/form';
 export * from './links/links';
 export * from './about/about';
+export * from './ui/silk/silk';
 export * from './header/header';
 export * from './resume/resume';
 export * from './service/service';

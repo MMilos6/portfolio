@@ -2,7 +2,6 @@ export interface NavItem {
     id: string;
     name: string;
     routePath: string;
-    icon: React.ReactElement;
 }
 
 export interface NavLinkProps {
@@ -10,5 +9,4 @@ export interface NavLinkProps {
     pathname: string;
     routePath: string;
     onClick: () => void;
-    icon: React.ReactNode;
 }

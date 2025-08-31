@@ -11,17 +11,18 @@
 }
 
 .title {
-    color: var(--color-white);
     font-size: 26px;
     font-weight: 500;
+    color: var(--color-white);
 }
 
 .item {
     display: flex;
+    border: var(--border);
     margin-bottom: 1.5rem;
     border-radius: 0.5rem;
     flex-direction: column;
-    border: var(--border);
+    backdrop-filter: var(--blur);
     padding: 1rem 0.75rem 1rem 1.25rem;
 }
 
@@ -35,9 +36,9 @@
 }
 
 .itemTitle {
-    color: var(--color-white);
     font-size: 20px;
     font-weight: 400;
+    color: var(--color-white);
 }
 
 .desc {

@@ -1,8 +1,10 @@
 .container {
-    margin: 70px auto 0;
+    border: none;
     max-width: 100%;
+    margin: 90px auto 0;
     padding: 0 1rem 3rem;
-    background-color: #0c0c0c;
+    backdrop-filter: var(--blur);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 640px) {
@@ -20,6 +22,8 @@
 @media (min-width: 1024px) {
     .container {
         border-radius: 16px;
+        margin: 150px auto 0;
+        border: var(--border);
         max-width: calc(100% - 32px);
     }
 }
@@ -35,14 +39,14 @@
 }
 
 .inner > a {
-    font-size: 16px;
-    color: #888;
-    width: max-content;
-    text-decoration: none;
-    margin-bottom: 30px;
     display: flex;
-    align-items: center;
+    color: #888;
+    font-size: 16px;
     column-gap: 5px;
+    width: max-content;
+    margin-bottom: 30px;
+    align-items: center;
+    text-decoration: none;
     transition: var(--transition);
 }
 

@@ -4,11 +4,6 @@ import { Divide as Hamburger } from 'hamburger-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { FC, useRef, useState } from 'react';
-import { AiOutlineHome } from 'react-icons/ai';
-import { CgNotes } from 'react-icons/cg';
-import { FaUser } from 'react-icons/fa';
-import { FiCodesandbox } from 'react-icons/fi';
-import { RiContactsBookLine } from 'react-icons/ri';
 
 import { Logo } from './logo';
 import styles from './style.module.css';
@@ -19,31 +14,26 @@ const data: NavItem[] = [
         id: "1",
         name: "Home",
         routePath: "/",
-        icon: <AiOutlineHome />,
     },
     {
         id: "2",
         name: "About",
         routePath: "/about",
-        icon: <FaUser />,
     },
     {
         id: "3",
         name: "Resume",
         routePath: "/resume",
-        icon: <CgNotes />,
     },
     {
         id: "4",
         name: "Projects",
         routePath: "/projects",
-        icon: <FiCodesandbox />,
     },
     {
         id: "5",
         name: "Contact",
         routePath: "/contact",
-        icon: <RiContactsBookLine />,
     },
 ];
 
@@ -53,7 +43,7 @@ const isActiveLink = (menuPath: string, routePath: string): boolean => {
     return cleanedRoute === cleanedMenu || cleanedRoute.startsWith(`${cleanedMenu}/`);
 };
 
-const NavLink: FC<NavLinkProps> = ({ routePath, icon, name, pathname, onClick }) => {
+const NavLink: FC<NavLinkProps> = ({ routePath, name, pathname, onClick }) => {
     const activeClass = isActiveLink(routePath, pathname)
         ? `${styles.navLink} ${styles.active}`
         : styles.navLink;
@@ -61,7 +51,6 @@ const NavLink: FC<NavLinkProps> = ({ routePath, icon, name, pathname, onClick })
     return (
         <li className={styles.navItem}>
             <Link href={routePath} aria-label={`Go to ${name}`} onClick={onClick} className={activeClass}>
-                <span className={styles.icon}>{icon}</span>
                 {name}
             </Link>
         </li>
@@ -103,10 +92,9 @@ export const Header: FC = () => {
 
                     <nav className={styles.hiddenLgBlock}>
                         <ul className={styles.desktopNavList}>
-                            {data.map(({ id, routePath, icon, name }) => (
+                            {data.map(({ id, routePath, name }) => (
                                 <NavLink
                                     key={id}
-                                    icon={icon}
                                     name={name}
                                     pathname={pathname}
                                     routePath={routePath}
@@ -129,10 +117,9 @@ export const Header: FC = () => {
                             ref={menuRef}
                             className={`${styles.mobileNav} ${menuOpen ? styles.mobileNavOpen : ''}`}
                         >
-                            {data.map(({ id, routePath, icon, name }) => (
+                            {data.map(({ id, routePath, name }) => (
                                 <NavLink
                                     key={id}
-                                    icon={icon}
                                     name={name}
                                     pathname={pathname}
                                     routePath={routePath}

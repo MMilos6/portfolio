@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google';
 
 import { ErrorBoundary, Header } from '@/features';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Providers from './providers';
 
@@ -67,6 +68,7 @@ export default function RootLayout({
                         <Providers>{children}</Providers>
                     </div>
                     <Analytics />
+                    <SpeedInsights />
                 </ErrorBoundary>
             </body>
         </html>

@@ -14,6 +14,14 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: var(--font-poppins), sans-serif;
+    background: linear-gradient(135deg, 
+        var(--color-secondary) 0%, 
+        #1a3318 30%, 
+        #0f1a0e 60%, 
+        #0a0f0a 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 a {

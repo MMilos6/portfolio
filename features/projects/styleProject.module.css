@@ -113,7 +113,8 @@
     }
 }
 
-.tagsWrapper button {
+.tagsWrapper button,
+.tagButton {
     font-size: 15px;
     cursor: default;
     margin-right: 8px;
@@ -124,15 +125,27 @@
     color: var(--color-gray);
     backdrop-filter: var(--blur);
     transition: var(--transition);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.tagButton {
+    cursor: pointer;
+}
+
+.tagButton:hover {
+    color: var(--color-white);
 }
 
 @media (min-width: 768px) {
-    .tagsWrapper button {
+    .tagsWrapper button,
+    .tagButton {
         margin-bottom: 0;
     }
 }
 
-.tagsWrapper button:first-of-type {
+.tagsWrapper button:first-of-type,
+.tagButton:first-of-type {
     margin-left: 0;
 }
 

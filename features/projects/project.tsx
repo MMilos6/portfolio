@@ -113,24 +113,23 @@ export const Project = ({ project }: IProjectProp) => {
                     <FaLink style={{ color: randomColors[4] }} />
                     Associated with<span>:</span>
                 </h3>
-                <button
-                    aria-label={
-                        associatedWith && associatedWithUrl
-                            ? `Visit associated link for ${associatedWith}`
-                            : 'Freelance'
-                    }>
-                    {associatedWith && associatedWithUrl ?
-                        <Link
-                            target='_blank'
-                            href={associatedWithUrl}
-                            aria-label={`Visit ${associatedWith}`}
-                        >
-                            {associatedWith}
-                        </Link>
-                        :
-                        'Freelance'
-                    }
-                </button>
+                {associatedWith && associatedWithUrl ? (
+                    <Link
+                        target='_blank'
+                        href={associatedWithUrl}
+                        className={styles.tagButton}
+                        aria-label={`Visit associated link for ${associatedWith}`}
+                    >
+                        {associatedWith}
+                    </Link>
+                ) : (
+                    <button
+                        className={styles.tagButton}
+                        aria-label='Freelance'
+                    >
+                        Freelance
+                    </button>
+                )}
             </div>
             {contributors && contributors.length > 0 && 
                 <div className={styles.tagsWrapper}>
@@ -139,25 +138,25 @@ export const Project = ({ project }: IProjectProp) => {
                         Contributors<span>:</span>
                     </h3>
                     {contributors.map(({lnProfile, name}) => (
-                        <button
-                            key={lnProfile}
-                            aria-label={
-                                lnProfile
-                                ? `Visit LinkedIn profile of ${name}`
-                                : `Visit profile of ${name}`
-                            }>
-                            {lnProfile ? 
-                                <Link
-                                    target='_blank'
-                                    href={lnProfile}
-                                    aria-label={`Visit LinkedIn profile of ${name}`}
-                                >
-                                    {name}
-                                </Link>
-                                :
-                                name
-                            }
-                        </button>
+                        lnProfile ? (
+                            <Link
+                                key={lnProfile}
+                                target='_blank'
+                                href={lnProfile}
+                                className={styles.tagButton}
+                                aria-label={`Visit LinkedIn profile of ${name}`}
+                            >
+                                {name}
+                            </Link>
+                        ) : (
+                            <button
+                                key={name}
+                                className={styles.tagButton}
+                                aria-label={`Visit profile of ${name}`}
+                            >
+                                {name}
+                            </button>
+                        )
                     ))}
                 </div>
             }

@@ -3,7 +3,7 @@ import './globals.css';
 
 import { Poppins } from 'next/font/google';
 
-import { ErrorBoundary, Header, Silk } from '@/features';
+import { ErrorBoundary, Header } from '@/features';
 import { Analytics } from '@vercel/analytics/next';
 
 import Providers from './providers';
@@ -63,13 +63,6 @@ export default function RootLayout({
             <body className={`${poppins.variable}`}>
                 <ErrorBoundary>
                     <div className="mainContainer">
-                        <Silk
-                            speed={5}
-                            scale={1}
-                            color="#182f17"
-                            noiseIntensity={0}
-                            rotation={0}
-                        />
                         <Header />
                         <Providers>{children}</Providers>
                     </div>

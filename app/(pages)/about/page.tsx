@@ -3,19 +3,26 @@ import React from 'react';
 import { About, Service } from '@/features';
 import { aboutQuery } from '@/groq';
 import { client } from '@/sanity/lib/client';
+import { urlFor } from '@/sanity/lib/image';
 
 import styles from './style.module.css';
 
 export default async function Index() {
     try {
-        const data = await client.fetch(aboutQuery());
+        const data = await client.fetch(aboutQuery(), {}, {
+            next: { revalidate: 86400 }
+        });
 
         if (!data) {
             console.warn("Data not found");
             return null;
         }
 
-        const { biography, profileImgSrc, services } = data;
+        const { biography, profileImage, services } = data;
+
+        const profileImgSrc = profileImage 
+            ? urlFor(profileImage, { width: 600, height: 800, quality: 90 })?.url() || ''
+            : '';
 
         return (
             <div className={styles.container}>

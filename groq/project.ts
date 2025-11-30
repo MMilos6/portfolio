@@ -5,7 +5,7 @@ export const projectQuery = (slug: string) => `
         projectDescriptionFirst,
         projectDescriptionSecond,
         "slug": slug.current,
-        "image": image.asset->url,
+        "imageAsset": image.asset,
         projectTypeTags,
         projectTechStackTags,
         associatedWith,

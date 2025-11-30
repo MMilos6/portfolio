@@ -1,12 +1,23 @@
-import { Form, Links } from '@/features';
+import dynamic from 'next/dynamic';
 import { contactQuery } from '@/groq';
 import { client } from '@/sanity/lib/client';
 
 import styles from './style.module.css';
 
+const Form = dynamic(() => import('@/features').then(mod => ({ default: mod.Form })), {
+    loading: () => <div style={{ minHeight: '400px' }}>Loading form...</div>,
+    ssr: true
+});
+
+const Links = dynamic(() => import('@/features').then(mod => ({ default: mod.Links })), {
+    ssr: true
+});
+
 export default async function Index() {
     try {
-        const data = await client.fetch(contactQuery());
+        const data = await client.fetch(contactQuery(), {}, {
+            next: { revalidate: 86400 }
+        });
 
         if (!data) {
             console.warn("Data not found");

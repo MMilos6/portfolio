@@ -29,9 +29,9 @@ export const Hero = ({ firstName, lastName, position, avatars, files, links }: I
                     priority
                     width={250}
                     height={250}
-                    alt={`${firstName} ${lastName} avatar`}
-                    className={styles.avatarImage}
                     src={currentAvatar}
+                    className={styles.avatarImage}
+                    alt={`${firstName} ${lastName} avatar`}
                 />}
             </div>
 
@@ -39,17 +39,17 @@ export const Hero = ({ firstName, lastName, position, avatars, files, links }: I
             <p className={styles.description}>{position}</p>
 
             <div className={styles.socialWrapper}>
-                <Links links={links}/>
+                <Links links={links} />
             </div>
 
             {files && (
                 <div className={styles.downloadWrapper}>
                     {files.map((fileUrl, index) => (
                         <a
-                            key={index}
                             download
-                            className={styles.downloadButton}
+                            key={index}
                             href={fileUrl}
+                            className={styles.downloadButton}
                         >
                             Download CV
                         </a>

@@ -6,8 +6,8 @@ export const heroQuery = () => `
             position,
         },
         "avatars": {
-                "avatar1Src": media.avatar1.asset->url,
-                "avatar2Src": media.avatar2.asset->url,
+                "avatar1": media.avatar1.asset,
+                "avatar2": media.avatar2.asset,
             },
         links,
         documents{

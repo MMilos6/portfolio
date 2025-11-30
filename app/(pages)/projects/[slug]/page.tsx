@@ -6,6 +6,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { Project } from '@/features';
 import { projectQuery } from '@/groq';
 import { client } from '@/sanity/lib/client';
+import { urlFor } from '@/sanity/lib/image';
 
 import styles from '../style.module.css';
 
@@ -17,9 +18,15 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     const { slug } = await params;
 
     try {
-        const project = await client.fetch(projectQuery(slug));
+        const project = await client.fetch(projectQuery(slug), {}, {
+            next: { revalidate: 86400 }
+        });
 
         if (!project) return {};
+
+        const mainImage = project.imageAsset 
+            ? urlFor(project.imageAsset, { width: 1200, height: 630, quality: 90 })?.url() || ''
+            : '';
 
         return {
             title: `${project.seoTitle}`,
@@ -29,7 +36,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
                 description: project.seoDescription,
                 images: [
                     {
-                        url: project.mainImage,
+                        url: mainImage,
                         width: 1200,
                         height: 630,
                         alt: project.seoTitle,
@@ -40,7 +47,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
                 card: 'summary_large_image',
                 title: project.seoTitle,
                 description: project.seoDescription,
-                images: [project.mainImage],
+                images: [mainImage],
             },
         };
     } catch (error) {
@@ -57,11 +64,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     }
 
     try {
-        const project = await client.fetch(projectQuery(slug));
+        const project = await client.fetch(projectQuery(slug), {}, {
+            next: { revalidate: 86400 }
+        });
 
         if (!project) {
             return notFound();
         }
+
+        const optimizedProject = {
+            ...project,
+            image: project.imageAsset 
+                ? urlFor(project.imageAsset, { width: 644, height: 432, quality: 90 })?.url() || ''
+                : ''
+        };
 
         return (
             <div className={styles.container}>
@@ -70,7 +86,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         <Link href="/projects">
                             <FaArrowLeft /> Back to all works
                         </Link>
-                        <Project project={project} />
+                        <Project project={optimizedProject} />
                         <Link className={styles.mobileLink} href="/projects">
                             <FaArrowLeft /> Back to all works
                         </Link>

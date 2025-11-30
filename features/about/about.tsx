@@ -24,6 +24,8 @@ export const About = ({
                     height={400}
                     className={styles.image}
                     src={profileImgSrc || fallbackImgSrc}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 300px"
                     alt={`${firstName} ${lastName}` || 'Profile Image'}
                 />
             </div>

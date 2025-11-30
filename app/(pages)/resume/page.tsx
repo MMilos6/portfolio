@@ -1,13 +1,24 @@
-
-import { Resume, TechStack } from '@/features';
+import dynamic from 'next/dynamic';
 import { resumeQuery } from '@/groq';
 import { client } from '@/sanity/lib/client';
 
 import styles from './style.module.css';
 
+const Resume = dynamic(() => import('@/features').then(mod => ({ default: mod.Resume })), {
+    loading: () => <div style={{ minHeight: '300px' }}>Loading resume...</div>,
+    ssr: true
+});
+
+const TechStack = dynamic(() => import('@/features').then(mod => ({ default: mod.TechStack })), {
+    loading: () => <div style={{ minHeight: '200px' }}>Loading tech stack...</div>,
+    ssr: true
+});
+
 export default async function Index() {
     try {
-        const data = await client.fetch(resumeQuery());
+        const data = await client.fetch(resumeQuery(), {}, {
+            next: { revalidate: 86400 }
+        });
 
         if (!data) {
             console.warn("Data not found");

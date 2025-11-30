@@ -9,3 +9,4 @@ export * from './service/service';
 export * from './projects/project';
 export * from './projects/projects';
 export * from './techStack/techStack';
+export * from './error-boundary/error-boundary';

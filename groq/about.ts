@@ -9,7 +9,7 @@ export const aboutQuery = () => `
             phone,
             birthday
         },
-        "profileImgSrc": media.profileImage.asset->url,
+        "profileImage": media.profileImage.asset,
         "services": services.servicesList
     }
 `;

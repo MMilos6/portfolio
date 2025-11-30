@@ -57,9 +57,11 @@ export const Projects = ({projects}: IProjectsProp) => {
                                 width={300}
                                 src={image}
                                 height={200}
+                                loading="lazy"
                                 className={styles.image}
                                 aria-label={`Project ${projectName} image`}
                                 alt={`Image of the project ${projectName}`}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                             <h3 className={styles.title}>{projectName}</h3>
                         </div>

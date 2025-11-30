@@ -105,7 +105,7 @@ const SilkPlane = forwardRef<Mesh, SilkPlaneProps>(function SilkPlane(
 
   useFrame((_state: RootState, delta: number) => {
     const mesh = ref as React.MutableRefObject<Mesh | null>;
-    if (mesh.current) {
+    if (mesh.current && !document.hidden) {
       const material = mesh.current.material as ShaderMaterial & {
         uniforms: SilkUniforms;
       };
@@ -145,9 +145,27 @@ export const Silk: React.FC<SilkProps> = ({
 }) => {
   const meshRef = useRef<Mesh>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const [shouldRender, setShouldRender] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mediaQuery.matches) {
+      setShouldRender(false);
+      return;
+    }
+    
+    const handleVisibilityChange = () => {
+      setIsPaused(document.hidden);
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, []);
 
   const uniforms = useMemo<SilkUniforms>(
@@ -162,17 +180,17 @@ export const Silk: React.FC<SilkProps> = ({
     [speed, scale, noiseIntensity, color, rotation]
   );
 
-  if (!isMounted) {
+  if (!isMounted || !shouldRender) {
     return (
       <div 
         className={className}
         style={{
-          position: 'absolute',
           top: 0,
           left: 0,
+          zIndex: -1,
           width: '100%',
           height: '100%',
-          zIndex: -1,
+          position: 'absolute',
           pointerEvents: 'none',
           background: 'transparent'
         }}
@@ -184,20 +202,20 @@ export const Silk: React.FC<SilkProps> = ({
     <div 
       className={className}
       style={{
-        position: 'absolute',
         top: 0,
         left: 0,
+        zIndex: -1,
         width: '100%',
         height: '100%',
-        zIndex: -1,
+        position: 'absolute',
         pointerEvents: 'none'
       }}
     >
       <Canvas 
         dpr={[1, 2]} 
-        frameloop="always"
-        camera={{ position: [0, 0, 1], fov: 75 }}
         style={{ background: 'transparent' }}
+        frameloop={isPaused ? "never" : "always"}
+        camera={{ position: [0, 0, 1], fov: 75 }}
       >
         <SilkPlane ref={meshRef} uniforms={uniforms} />
       </Canvas>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { FaCode, FaIndustry, FaLink, FaProjectDiagram, FaUser, FaUsers } from 'react-icons/fa';
 
 import { getRandomColors } from '@/shared';
@@ -25,7 +25,7 @@ export const Project = ({ project }: IProjectProp) => {
         projectDescriptionSecond,
     } = project;
 
-    const randomColors = getRandomColors(6);
+    const randomColors = useMemo(() => getRandomColors(6), []);
 
     return (
         <>
@@ -33,10 +33,12 @@ export const Project = ({ project }: IProjectProp) => {
                 <div className={styles.imageWrapper}>
                     <Image
                         role='img'
+                        src={image}
                         width={322}
                         height={216}
-                        src={image}
+                        loading="lazy"
                         className={styles.image}
+                        sizes="(max-width: 768px) 100vw, 644px"
                         alt={`Main image for project: ${projectName}`}
                     />
                 </div>

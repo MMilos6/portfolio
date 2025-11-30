@@ -27,6 +27,7 @@ export const Hero = ({ firstName, lastName, position, avatars, files, links }: I
             <div className={styles.avatarWrapper}>
                 {currentAvatar && <Image
                     priority
+                    fetchPriority="high"
                     width={250}
                     height={250}
                     src={currentAvatar}

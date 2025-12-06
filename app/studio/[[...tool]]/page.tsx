@@ -1,5 +1,4 @@
 import { NextStudio } from 'next-sanity/studio';
-import Head from 'next/head';
 
 import config from '../../../sanity.config';
 
@@ -8,12 +7,5 @@ export const dynamic = 'force-static';
 export { metadata, viewport } from 'next-sanity/studio';
 
 export default function StudioPage() {
-    return (
-        <>
-            <Head>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <NextStudio config={config} />
-        </>
-    )
+    return <NextStudio config={config} />
 }

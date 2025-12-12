@@ -3,7 +3,7 @@ import { defineField, defineType } from 'sanity';
 export const media = defineType({
     name: 'media',
     title: 'Media',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'profileImage',

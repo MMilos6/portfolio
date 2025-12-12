@@ -5,7 +5,7 @@ import { iconList } from '@/sanity/shared';
 export const services = defineType({
     name: 'services',
     title: 'Services',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'servicesList',

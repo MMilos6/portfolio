@@ -5,7 +5,7 @@ import { TagIcon } from '@sanity/icons';
 export const biography = defineType({
     name: 'biography',
     title: 'Biography',
-    type: 'document',
+    type: 'object',
     icon: TagIcon,
     fields: [
         defineField({

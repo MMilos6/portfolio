@@ -5,7 +5,7 @@ import { yearsList } from '@/sanity/shared';
 export const education = defineType({
     name: 'education',
     title: 'Education',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'educationList',

@@ -5,7 +5,7 @@ import { yearsList } from '@/sanity/shared';
 export const workExperience = defineType({
     name: 'workExperience',
     title: 'Work Experience',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'experienceList',

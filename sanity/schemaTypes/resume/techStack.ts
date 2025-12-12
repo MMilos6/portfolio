@@ -5,7 +5,7 @@ import { iconList } from '@/sanity/shared';
 export const techStack = defineType({
     name: 'techStack',
     title: 'Tech Stack',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'techStackList',

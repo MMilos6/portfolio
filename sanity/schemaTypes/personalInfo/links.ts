@@ -3,7 +3,7 @@ import { defineField, defineType } from 'sanity';
 export const links = defineType({
     name: 'links',
     title: 'Links',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'linkedinLabel',

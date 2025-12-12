@@ -3,7 +3,7 @@ import './globals.css';
 
 import { Poppins } from 'next/font/google';
 
-import { ErrorBoundary, Header } from '@/features';
+import { ErrorBoundary, Header, SnowfallWrapper } from '@/features';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -63,6 +63,7 @@ export default function RootLayout({
             </head>
             <body className={`${poppins.variable}`}>
                 <ErrorBoundary>
+                    <SnowfallWrapper />
                     <div className="mainContainer">
                         <Header />
                         <Providers>{children}</Providers>

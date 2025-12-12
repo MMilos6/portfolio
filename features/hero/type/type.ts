@@ -12,4 +12,5 @@ export interface IHeroProps {
     firstName: string;
     avatars: IAvatarsProps;
     links: ILinksProp;
+    showHat?: boolean;
 }

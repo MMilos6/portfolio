@@ -1,20 +1,26 @@
 import { Hero } from '@/features';
-import { heroQuery } from '@/groq';
+import { heroQuery, settingsQuery } from '@/groq';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 
 export default async function Home() {
     try {
-        const data = await client.fetch(heroQuery(), {}, {
-            next: { revalidate: 86400 }
-        });
+        const [heroData, settingsData] = await Promise.all([
+            client.fetch(heroQuery(), {}, {
+                next: { revalidate: 86400 }
+            }),
+            client.fetch(settingsQuery(), {}, {
+                next: { revalidate: 86400 }
+            })
+        ]);
 
-        if (!data) {
+        if (!heroData) {
             console.warn("Data not found");
             return null;
         }
 
-        const { links, avatars, documents, biography } = data;
+        const { links, avatars, documents, biography } = heroData;
+        const showHat = settingsData?.settings?.snowfall?.enabled || false;
 
         const optimizedAvatars = {
             avatar1Src: avatars.avatar1 
@@ -33,6 +39,7 @@ export default async function Home() {
                 position={biography.position}
                 lastName={biography.lastName}
                 firstName={biography.firstName}
+                showHat={showHat}
             />
         );
     } catch (error) {

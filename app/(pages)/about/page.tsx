@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { About, Service } from '@/features';
 import { aboutQuery } from '@/groq';
 import { client } from '@/sanity/lib/client';

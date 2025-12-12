@@ -8,7 +8,7 @@ import { Links } from '@/features';
 import styles from './style.module.css';
 import { IHeroProps } from './type/type';
 
-export const Hero = ({ firstName, lastName, position, avatars, files, links }: IHeroProps) => {
+export const Hero = ({ firstName, lastName, position, avatars, files, links, showHat = false }: IHeroProps) => {
     const [currentAvatar, setCurrentAvatar] = useState<string>("");
 
     useEffect(() => {
@@ -34,6 +34,15 @@ export const Hero = ({ firstName, lastName, position, avatars, files, links }: I
                     className={styles.avatarImage}
                     alt={`${firstName} ${lastName} avatar`}
                 />}
+                {showHat && (
+                    <Image
+                        src="/christmas-hat-clipart.png"
+                        alt="Santa hat"
+                        width={250}
+                        height={250}
+                        className={styles.santaHat}
+                    />
+                )}
             </div>
 
             <h3 className={styles.name}>{firstName} {lastName}</h3>

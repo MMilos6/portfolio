@@ -40,7 +40,6 @@
 .avatarWrapper {
     width: 250px;
     height: 250px;
-    overflow: hidden;
     position: relative;
 }
 
@@ -56,6 +55,25 @@
     height: 100%;
     border-radius: 50%;
     background: linear-gradient(180deg, var(--color-primary), var(--color-secondary), transparent);
+}
+
+.santaHat {
+    top: -73px;
+    z-index: 1;
+    left: -24px;
+    width: 226px;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+@media (min-width: 1536px) {
+    .santaHat {
+        top: -83px;
+        left: -35px;
+        width: 260px;
+    }
 }
 
 .name {

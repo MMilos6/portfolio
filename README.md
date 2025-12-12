@@ -1,11 +1,11 @@
 # 🚀 Personal Portfolio Website
 
-A modern, responsive, and **cleanly structured** portfolio website built with **Next.js 15**, **TypeScript**, and **Sanity CMS**.  
+A modern, responsive, and **cleanly structured** portfolio website built with **Next.js 16**, **TypeScript**, and **Sanity CMS**.  
 This project is designed to **showcase your skills, projects, and experience** with a clean, elegant, and performant frontend architecture.
 
-> 💡 **Feel free to use this portfolio as a starter for your own site!** It’s completely open-source and customizable.
+> 💡 **Feel free to use this portfolio as a starter for your own site!** It's completely open-source and customizable.
 
-![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black?style=for-the-badge&logo=next.js)
+![Next.js](https://img.shields.io/badge/Next.js-16.0.7-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue?style=for-the-badge&logo=typescript)
 ![Sanity CMS](https://img.shields.io/badge/Sanity-CMS-orange?style=for-the-badge&logo=sanity)
 
@@ -15,25 +15,28 @@ This project is designed to **showcase your skills, projects, and experience** w
 
 - 🎨 **Modern Design** — Clean, responsive UI with smooth animations
 - 📱 **Mobile-First** — Fully optimized for all screen sizes
-- ⚡ **Fast Performance** — Leveraging Next.js 15 and Turbopack
+- ⚡ **Fast Performance** — Leveraging Next.js 16 and Turbopack
 - 📝 **Headless CMS** — Powered by Sanity for easy content management
 - 🔍 **SEO Optimized** — Pre-rendered and structured content for search engines
 - 📧 **Contact Form** — EmailJS integration for real-time communication
 - 📂 **Project Portfolio** — Dedicated section with detailed project views
 - 📄 **Resume Display** — Styled professional CV section
 - 🛠️ **Interactive Tech Stack** — Showcase the technologies behind your work
+- ❄️ **Snowfall Effect** — Customizable animated snowfall with Santa hat overlay on avatar
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Next.js 15** — React framework with App Router
+- **Next.js 16** — React framework with App Router
+- **React 19** — Latest React version with improved performance
 - **TypeScript** — Type-safe development
 - **Styled Components / CSS Modules** — Component-level styling
 - **React Icons** — Icon library
 - **AOS** — Animate On Scroll
 - **React Modal** — Custom modal components
+- **React Snowfall** — Animated snowfall effect library
 
 ### CMS & Backend
 - **Sanity CMS** — Headless content management system
@@ -108,6 +111,19 @@ portfolio/
 - Access the CMS at `/studio`
 - Easily update your content, projects, and resume from the CMS
 
+### ❄️ Snowfall Settings
+Configure the snowfall effect directly from Sanity CMS:
+1. Go to `/studio` → **Personal Info** → **Settings** tab
+2. In **Snowfall Settings**, you can configure:
+   - **Enable Snowfall** — Toggle the effect on/off
+   - **Snowflake Count** — Number of snowflakes (0-1000, default: 150)
+   - **Speed** — Speed range [min, max] (default: [0.5, 3])
+   - **Wind** — Wind effect range [min, max] (default: [-0.5, 0.5])
+   - **Radius** — Snowflake size range [min, max] in pixels (default: [0.5, 3.0])
+   - **Rotation Speed** — Rotation speed range [min, max] in degrees per second (default: [0, 0])
+3. When snowfall is enabled, a Santa hat overlay automatically appears on your avatar
+4. All fields have default values, so you can leave them empty and the effect will work with defaults
+
 ### 🎨 Style & Layout
 - Global styles: `app/(pages)/globals.css`
 - Components use `styled-components` or `CSS Modules`
@@ -179,6 +195,7 @@ Licensed under the [MIT License](LICENSE)
 - [Sanity.io](https://www.sanity.io/)
 - [Styled Components](https://styled-components.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- [React Snowfall](https://github.com/cahilfoley/react-snowfall) — Snowfall effect library
 
 ---
 

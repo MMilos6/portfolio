@@ -4,3 +4,4 @@ export { links } from './links';
 export { media } from './media';
 export { personalInfo } from './personalInfo';
 export { services } from './services';
+export { settings } from './settings';

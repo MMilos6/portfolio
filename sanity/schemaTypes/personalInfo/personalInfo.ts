@@ -10,6 +10,7 @@ export const personalInfo = defineType({
         { name: 'links', title: 'Links' },
         { name: 'documents', title: 'Documents' },
         { name: 'services', title: 'Services' },
+        { name: 'settings', title: 'Settings' },
     ],
     fields: [
         defineField({
@@ -36,6 +37,11 @@ export const personalInfo = defineType({
             name: 'services',
             type: 'services',
             group: 'services',
+        }),
+        defineField({
+            name: 'settings',
+            type: 'settings',
+            group: 'settings',
         }),
     ],
 })

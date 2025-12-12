@@ -9,3 +9,5 @@ export * from './projects/project';
 export * from './projects/projects';
 export * from './techStack/techStack';
 export * from './error-boundary/error-boundary';
+export * from './snowfall/snowfall';
+export * from './snowfall/snowfall-wrapper';

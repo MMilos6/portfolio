@@ -20,7 +20,7 @@ export default async function Home() {
         }
 
         const { links, avatars, documents, biography } = heroData;
-        const showHat = settingsData?.settings?.snowfall?.enabled || false;
+        const showHat = settingsData?.settings?.snowfall?.enabled === true ? true : false;
 
         const optimizedAvatars = {
             avatar1Src: avatars.avatar1 
